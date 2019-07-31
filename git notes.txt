@@ -1,0 +1,235 @@
+Version Control/Source controls
+
+Team
+	Team Members(Developers, testers, UX designers, BA, Solution Architect)
+	Team owner( Product Owner)
+
+Waterfall Model(legacy)
+	Initial stage(Requirement gathering)(BA)
+	Analysis  (Manager/Architect)
+	Design  (UX/Architect)
+	Development (Development team)
+	Testing (Testing team)
+	Deployement(Delivery) (Delivery team)
+
+
+Agile (SDLC)(Progressive or Incremental development)
+Here, all the team work together.
+
+Requirement gathering, analysis, design, development , testing and deployment go together.
+Start with small requirement, develop it , test it and deploy it. 
+MVP(Minimum Valued Product)
+after this, we get the feedback from the end-client, then will start adding new features to the project.
+
+To work as a Team: 
+	We need to share the code(collaboration)
+	We need to track the work(status)(ToDo, In-progress, Testing, Done)
+	We need to build the code
+	We need to deploy the code to the different servers(Development, QA, Staging, Production)
+
+
+How to do these things?
+	We can use some tools for this.
+
+How to share the code with team? 
+	For this purpose, we use version controls/source control tool.
+	It is a kind of shared directory or shared repository.
+	we got different tools for that:
+		Github(internet based)/ Git repository
+		Azure DevOps(could) /Azure git repository 
+		TFS (TEam Project)
+		SVN (Team Project)
+		
+
+How to collaborate team and work? 
+	For this, we can use SDLC tools.
+		JIRA
+		Azure DevOps
+		Github 
+====================
+Let us talk about version control
+	We use this for creating a repository.
+	So that, team members can collborate and share the code.
+	Let us use : Github for creating repository.
+
+
+github.com
+
+Create an Account 
+SignIn to the github
+Create a Team Project/Git repository
+
+Once, the repository is created , you can share the repository with team. 
+So that, we as a team can collaborate.
+
+
+Steps to work with Github:
+
+Login
+Create a new Repository 
+Open the repository
+Clone the URL(share this URL with team)
+
+
+This is the sample git URL :
+	https://github.com/dotnetsatya/July2019-UI.git
+
+Once you get your Git repo URL , you can clone your local machine, start developing.
+
+
+How to work with git repository from your development machine:
+	You can use IDE for source development(e.g Visual studio code, Visual Studio , ..)
+	OR	
+	You can use Git bash for cloning/pushing the changes to the repo.
+
+What is Git bash?
+	It is a king git tool for windows.
+	You can use this for cloning/fetching/pushing the code to the git repository.
+
+how to install git bash?
+	https://git-scm.com/downloads
+
+	Download for windows
+
+Once you download git bash, you can use either git commands or git GUI.
+
+
+once, installation is done, you can verify in your command prompt:
+
+Open command prompt:
+
+git --version
+	If it gives some version, then it's installed.
+
+git provides various commands:
+
+step 1: 
+	How to clone the repository?
+
+you can use "git clone" command.
+
+First, you create your working directory(workspace)
+
+e.g.
+c:\workspace
+	This is my working directory in local machine.
+
+We clone our repo in the directory.
+
+e.g.
+c:\workspace\git clone https://github.com/dotnetsatya/July2019-UI.git
+
+after cloing, go to the repository
+
+e.g.
+C:\workspace\July2019-UI
+
+
+we have couple commands to work with git:
+
+git clone "URL"
+	this is for cloning
+
+git status
+	this is for checking the current status of the repository
+
+You can add new files/chages to the repository.
+
+You can check the status.
+
+You can track the items(changes)(staging)
+That means, only stages files can be commited.
+First , stage the files and then commit
+
+
+git add
+	this is used to add the new files/changed files to the git branch.
+
+e.g.
+git add file.txt
+git add index.html
+
+git add .
+	This is tracking all the changes/new items to the git branch.
+
+
+then, check status again
+
+git status
+
+
+
+How to commit the tracked/staged files?
+
+git commit for this commiting changes.
+
+e.g.
+git commit -a -m "commit message"
+
+git commit -a -m "First Project is added to the repo"
+
+
+After commit your changes, you need to push that commit to the git.
+Then only your changes are visible to the team.
+
+use "git push" to push your commits to the git repo.
+
+
+e.g.
+git push
+
+It might ask you for git credentials for first time pushing.
+
+summary:
+
+git clone (very first time, only once)
+
+git status
+git add .
+git commit
+git push
+
+
+how to get the latest code from git repo?
+for this , we use "git pull"
+
+
+e.g.
+git pull
+
+
+Note:
+You can also do all this git operations directly from Visual Studio Code.
+
+Open Visual Studio Code
+Open your working directory(workspace/repository)
+Open Source control tab/SCM(source control manager)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
