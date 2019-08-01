@@ -15,11 +15,13 @@
             }
 
             .content{
-                height: 500px;
+                height: auto;
                 border:2px dotted gray;
                 border-radius: 10px;
                 color:#81BEF7;
                 background-color: azure;
+                padding: 10px 10px;
+                margin: 10px 10px;
             }
 
             .blue{
@@ -28,14 +30,6 @@
                 width:50%;
             }
 
-            .section1{
-                text-indent: 10px;
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                font-size: 14px;
-                line-height: 12px;
-                color:sienna;
-                text-align: left;
-            }
 
             #bottomFooter{
                 text-align: center;
@@ -46,7 +40,18 @@
 
             #topLogo img{
                 position: absolute;
-    top: 0;
+                top: 0;
+                height: 100px;
+                width:200px;
+                border:1px solid green;
+                border-radius: 50%;
+            }
+
+            ul#topNavList{
+                list-style: none;
+            }
+            ul#topNavList li{
+                display: inline;
             }
           </style>
     </head>
@@ -55,7 +60,7 @@
         <header id="topHeader" class="block">
             <h1 style="text-align: center;color:blue;">Git Demo</h1>
             <div id="topLogo">
-                <img src="logo.jpg"/>
+                <a href="http://www.w3.org" target="_blank" title="w3 org"><img src="logo.jpg" alt="Sample logo"/></a>
             </div>
         </header>
 
@@ -63,40 +68,157 @@
         <nav id="topNav">
             <ul id="topNavList">
                 <li>
-                    <a href="">About</a>
+                    <a href="about.html" target="_blank" title="about">About</a>
                 </li>
                 <li>
-                    <a href="">Contact</a>
+                    <a href="" title="contact">Contact</a>
                 </li>
                 <li>
-                    <a href="">Feedback</a>
+                    <a href="" title="feedback">Feedback</a>
                 </li>
             </ul>
         </nav>
-        <hr class="blue"  />
-        <hr class="blue" />
+       
         <!--This is for main content-->
         <main id="maincontent" class="content">
-            <section id="topContent">
+           <nav id="mainNav"> 
+            <ul>
+                <li>
+                    <a href="#html">HTML </a>
+                </li>
+                <li>
+                    <a href="#jQuery">jQuery</a>
+                </li>
+                <li>
+                    <a href="#css">CSS</a>
+                </li>
+            </ul>
+           </nav>
 
-            </section>
+           <br>
+           <br>
 
-            <section id="middleContent">
-                    <p class="section1">
-                            Build responsive, mobile-first projects on the web with the world’s most popular front-end component library.
-                            Bootstrap is an open source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful plugins built on jQuery.            </p>
-            </section>
-
-            <section id="bottomContnet">
-
-            </section>
+           <br>
+           <br>
            
+           <br>
+           <br>
+           
+           <br>
+           <br>
+           
+           <br>
+           <br>
+           
+           <br>
+           <br>
+           
+           <br>
+           <br>
+           
+           <br>
+           <br>
+           
+           <br>
+           <br>
+           
+           <br>
+           <br>
+           <br>
+           <br>
+           
+           <br>
+           <br>
+           
+
+           <a name="html">HTML Introduction</a>
+           <p>
+               This is the for HTML content.
+               This is the for HTML content.This is the for HTML content.This is the for HTML content.This is the for HTML content.This is the for HTML content.This is the for HTML content.
+               This is the for HTML content.
+               This is the for HTML content.
+               This is the for HTML content.
+               This is the for HTML content.
+           </p>
+           <br>
+           <br>
+           <br>
+           <br>
+           
+           <br>
+           <br>
+           
+           <br>
+           <br>
+           
+           <br>
+           <br>
+           
+           <br>
+           <br>
+           
+           <br>
+           <br>
+           
+
+           <a name="jQuery">JQuery Notes</a>
+           <p>
+               This is for jQuery content.
+               This is for jQuery content.
+               This is for jQuery content.
+               This is for jQuery content.
+               This is for jQuery content.
+               This is for jQuery content.
+               This is for jQuery content.
+           </p>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+
+           <br>
+           <br>
+           <br>
+           <br>
+           <br><br>
+           <br>
+
+           <a name="css">CSS notes</a>
+           <p>
+               This is for CSS notes.
+               This is for CSS notes.This is for CSS notes.This is for CSS notes.
+               This is for CSS notes.
+               This is for CSS notes.
+               This is for CSS notes.
+               This is for CSS notes.
+               This is for CSS notes.
+               This is for CSS notes.
+               This is for CSS notes.
+               This is for CSS notes.
+               This is for CSS notes.
+               This is for CSS notes.
+               This is for CSS notes.
+               This is for CSS notes.This is for CSS notes.
+               This is for CSS notes.
+
+               This is for CSS notes.
+               This is for CSS notes.
+
+           </p>
+           <div>
+               <a href="javascript:void(0)" onclick="window.scrollTo(0,0);">Go to Top</a>
+           </div>
         </main>
 
         <!--this is footer-->
 
         <footer id="bottomFooter" class="block">
             <span>&copy; 2019</span>
+            <br>
+            <a href="mailto:helpdesk@gmail.com">Click Me for feedback</a>
         </footer>
     </body>
 </html>
