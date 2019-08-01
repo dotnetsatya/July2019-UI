@@ -1,23 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Abhijeet Test 1</title>
-        <meta charset="utf-8">
+        <title>Index Page</title>
+        <meta charset="utf-8"/>
+
+      <style>
+          /* body{
+              background-image: url('backgroundImage.jpg');
+          } */
+            .block{
+                border-bottom:1px solid green;
+                border-radius: 5px;
+                height: 100px;
+            }
+
+            .content{
+                height: 500px;
+                border:2px dotted gray;
+                border-radius: 10px;
+                color:#81BEF7;
+                background-color: azure;
+            }
+
+            .blue{
+                color:blue;
+                height: 20px;
+                width:50%;
+            }
+
+            .section1{
+                text-indent: 10px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 14px;
+                line-height: 12px;
+                color:sienna;
+                text-align: left;
+            }
+
+            #bottomFooter{
+                text-align: center;
+                font-family: monospace;
+                font-style: italic;
+                background-image: url('headBackground.jpg')
+            }
+
+            #topLogo img{
+                position: absolute;
+    top: 0;
+            }
+          </style>
     </head>
     <body>
-    <header>
-        <h1>Demo Page</h1>
-    </header>
-    <nav>
-        <a href="Index.html">Home</a>
-        <a href="#">About</a>
-    </nav>
-    <main>
-        Something Something!!!
-    </main>
-    <footer>
-        <hr/>
-        &copy; 2019
-    </footer>
-</body>
+        <!--This is for header-->
+        <header id="topHeader" class="block">
+            <h1 style="text-align: center;color:blue;">Git Demo</h1>
+            <div id="topLogo">
+                <img src="logo.jpg"/>
+            </div>
+        </header>
+
+        <!--this is top navigation-->
+        <nav id="topNav">
+            <ul id="topNavList">
+                <li>
+                    <a href="">About</a>
+                </li>
+                <li>
+                    <a href="">Contact</a>
+                </li>
+                <li>
+                    <a href="">Feedback</a>
+                </li>
+            </ul>
+        </nav>
+        <hr class="blue"  />
+        <hr class="blue" />
+        <!--This is for main content-->
+        <main id="maincontent" class="content">
+            <section id="topContent">
+
+            </section>
+
+            <section id="middleContent">
+                    <p class="section1">
+                            Build responsive, mobile-first projects on the web with the world’s most popular front-end component library.
+                            Bootstrap is an open source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful plugins built on jQuery.            </p>
+            </section>
+
+            <section id="bottomContnet">
+
+            </section>
+           
+        </main>
+
+        <!--this is footer-->
+
+        <footer id="bottomFooter" class="block">
+            <span>&copy; 2019</span>
+        </footer>
+    </body>
 </html>
