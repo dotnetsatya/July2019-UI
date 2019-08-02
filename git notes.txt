@@ -206,6 +206,120 @@ Open your working directory(workspace/repository)
 Open Source control tab/SCM(source control manager)
 
 
+================
+Creating branches in Git:
+
+Git clone "URL"
+This will clone whole repository (with all branches)
+There was only one at first: master
+
+git add .
+git commit 
+git push
+
+These changes will be added the current branch(master)
+
+git status
+=============
+
+how to create new branch using git?
+
+git checkout -b "branchName"
+	
+e.g.
+	git checkout -b "satya-branch"
+
+		It creates a new branch and switch to that branch.
+
+
+how to switch to existing to existing branch?
+
+git chekout "branchname"
+
+
+e.g.
+	git checkout master
+
+
+
+To see list of all branches:
+
+git branch
+
+
+
+git push --set-upstream origin HTML-Branch
+	This is to push a new branch to remote repository.
+
+
+How to delete local branch?
+
+git branch -D "branchname"
+
+e.g.
+git branch -D "satya-branch"
+=======================
+Lists in HTML 
+
+Table in HTML 
+
+IFrame in HTML
+
+Forms in HTML
+
+
+===========
+HTML Basic elements:
+
+How to create blocks in HTML?(Container)
+
+We can use HTML semantic elements to create blocks:
+
+<header></header>
+
+<nav>
+</nav>
+
+
+<footer>
+</footer>
+
+<main>
+</main>
+
+<section>
+</section>
+
+<article>
+</article>
+
+<div></div>
+	This is what we were in the past for creating blocks.
+	Use css to controls the styles.
+
+<div id="header">
+</div>
+
+
+<div id="nav">
+</div>
+
+
+All are for creating a block (container)(full width)
+Use CSS for for styling.
+e.g.
+	height
+	width
+	..
+
+if you want to create inline block, we use "<span></span>"
+
+
+
+
+
+
+
 
 
 
