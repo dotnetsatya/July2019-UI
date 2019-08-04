@@ -1,0 +1,37 @@
+/* This is where you write the styles for layout */
+
+#topHeader {
+    height: 100px;
+    border: 1px solid Blue;
+    border-radius: 10px;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    background-image: url('bak-image.jpeg');
+  }
+  
+  #topNav ul {
+    list-style: none;
+  }
+  
+  #topNav ul li {
+    display: inline;
+  }
+
+  #main-content {
+    min-height: 500px;
+    border: 1px solid Blue;
+    border-radius: 10px;
+    padding: 10px 10px;
+    margin: 10px 10px;
+  }
+  
+  #footer {
+    height: 100px;
+    width: 100%;
+    border: 1px solid Blue;
+    border-radius: 10px;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    position: fixed;
+    bottom: 0;
+  }

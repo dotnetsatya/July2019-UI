@@ -1,55 +1,75 @@
-#topHeader {
-  height: 100px;
-  border: 1px solid Blue;
-  border-radius: 10px;
-  padding: 10px 10px;
-  margin: 10px 10px;
+@import "layout.css";
+@import "forms.css";
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  /* background-image: url('bak-image.jpeg'); */
 }
 
-#topNav ul {
-  list-style: none;
+p {
+  font-family: "Times New Roman", Times, serif;
+  color: blue;
+  font-size: 20px;
 }
 
-#topNav ul li {
-  display: inline;
-}
-#main-content {
-  min-height: 500px;
-  border: 1px solid Blue;
-  border-radius: 10px;
-  padding: 10px 10px;
-  margin: 10px 10px;
+#p1 {
+  background-color: red;
 }
 
-#footer {
-  height: 100px;
-  border: 1px solid Blue;
-  border-radius: 10px;
-  padding: 10px 10px;
-  margin: 10px 10px;
-}
-
-.login-form {
-  width: 400px;
-  height: 300px;
-  margin: 20px 20px;
-  padding: 20px 20px;
-}
-
-.form-group {
-  padding: 10px 10px;
-}
-
-.form-control {
-  height: 20px;
-  border: 2px solid darkgray;
-  border-radius: 10px;
-}
-
-.form-text-area{
-  height: 50px !important;
-}
-
-.btn-primary {
+#p2 {
   background-color: green;
+}
+
+label,
+span {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+h1,
+h3,
+h3,
+h4,
+h5,
+h6 {
+  font-family: cursive;
+  color: blueviolet;
+}
+
+a {
+  font-size: 16px;
+}
+
+#topNav ul li a {
+  border: 1px solid brown;
+  border-radius: 10px;
+  padding: 5px 5px;
+  background-color: azure;
+  text-decoration: none;
+}
+
+#topNav ul li a:hover {
+  background-color: bisque;
+  color: blueviolet;
+}
+
+#btnLogin:hover,
+button:hover {
+  color: red;
+  background-color: blue;
+}
+
+#imgLogo {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 99999;
+}
+
+#cssLogo {
+  position: absolute;
+  top: 10px;
+  right: 60px;
+  z-index: 9999;
 }
