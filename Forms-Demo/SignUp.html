@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Index Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script type="text/javascript">
+      function validateLogin() {
+        var username = document.getElementById("txtUsername").value;
+        var password = document.getElementById("txtPassword").value;
+        if (username == "satya" && password == "password") {
+          alert("You are valid user");
+        } else {
+          alert("Invalid user");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header id="topHeader">
+      <h1>Forms Demo</h1>
+      <nav id="topNav">
+        <ul>
+          <li>
+            <a href="Login.html">Login</a>
+          </li>
+          <li>
+            <a href="SignUp.html">Sign Up</a>
+          </li>
+          <li>
+            <a href="Index.html">Home</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div id="main-content">
+      <section id="mainSection">
+        <form id="frmSignup" name="frmSignup" class="signup-form" novalidate>
+          <fieldset>
+            <legend>Sing Up</legend>
+            <div class="form-group">
+              <label for="txtFirstName">FirstName: </label>
+              <input
+                type="text"
+                id="txtFirstName"
+                id="txtFirstName"
+                class="form-control"
+                autofocus
+                required
+                placeholder="please enter firstname"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="txtLastName">LastName: </label>
+              <input
+                type="text"
+                id="txtLastName"
+                id="txtLastName"
+                class="form-control"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="txtDescription">Description: </label>
+              <textarea
+                id="txtDescription"
+                name="txtDescription"
+                rows="5"
+                cols="20"
+                class="form-control form-text-area"
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="ddlGender">Gender: </label>
+              <select name="ddlGender" id="ddlGender">
+                <option selected="selected" value="" required
+                  >Please Select</option
+                >
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+                <option value="3">Unknown</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="listLanguage">Languages: </label>
+              <select
+                name="listLanguage"
+                id="listLanguage"
+                multiple="multiple"
+                required
+              >
+                <option selected="selected" value="">Please Select</option>
+                <option value="1">English</option>
+                <option value="2">Hindi</option>
+                <option value="3">Telugu</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="rdVisa">Visa: </label>
+              <input
+                type="radio"
+                name="rdVisa"
+                id="rdCitizen"
+                value="Citizen"
+                required
+              />
+              &nbsp; Citizen
+              <input
+                type="radio"
+                name="rdVisa"
+                id="rdResident"
+                value="Resident"
+                required
+              />&nbsp;Resident
+            </div>
+
+            <div class="form-group">
+              <label for="cbAgree">Agree: </label>
+              <input type="checkbox" id="cbAgree" name="cbAgree" required /> Are
+              you agreeing?
+            </div>
+
+            <div class="form-group">
+              <label for="txtDob">Date Of Birth: </label>
+              <input type="date" id="txtDob" name="txtDob" />
+            </div>
+
+            <div class="form-group">
+              <label for="txtCountry">Country: </label>
+              <input id="txtCountry" name="txtCountry" list="countryList" />
+
+              <datalist id="countryList">
+                <option value="India"></option>
+                <option value="Canada"></option>
+                <option value="US"></option>
+              </datalist>
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="form-control btn-primary">
+                Sign Up
+              </button>
+              &nbsp;
+              <button type="reset" class="form-control">Cancel</button>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </div>
+    <footer id="footer">
+      <span>
+        &copy; 2019
+      </span>
+    </footer>
+  </body>
+</html>
