@@ -3,10 +3,16 @@
 #topHeader {
     height: 100px;
     border: 1px solid Blue;
+
+    border-left-width: 5px;
+    border-left-style: double;
+    border-bottom-width: 10px;
+    border-bottom-color: bisque;
+
     border-radius: 10px;
     padding: 10px 10px;
     margin: 10px 10px;
-    background-image: url('bak-image.jpeg');
+    background-image: url('images/bak-image.jpeg');
   }
   
   #topNav ul {
@@ -18,11 +24,16 @@
   }
 
   #main-content {
-    min-height: 500px;
+    height: 300px;
+    overflow: scroll;
     border: 1px solid Blue;
     border-radius: 10px;
     padding: 10px 10px;
     margin: 10px 10px;
+    background-image: url('images/tiles.jpg');
+    background-repeat: repeat;
+    /* background-attachment: scroll;
+    background-position: center; */
   }
   
   #footer {
@@ -34,4 +45,9 @@
     margin: 10px 10px;
     position: fixed;
     bottom: 0;
+    font-family: cursive;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 2em;
+    display: block;
   }

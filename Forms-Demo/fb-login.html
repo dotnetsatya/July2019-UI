@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Index Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <style>
+      #topNav {
+        position: absolute;
+        top: 34px;
+        right: 30px;
+        float: right;
+      }
+
+      .form-inline {
+            display: inline;
+            padding: 10px 10px;
+            margin: 10px 10px;
+            background-color: blueviolet;
+        }
+
+      .form-group-inline {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="topHeader">
+      <h1>Forms Demo</h1>
+      <nav id="topNav">
+        <form class="form-inline">
+          <div class="form-group-inline">
+            <label>Username:</label><br>
+            <input type="text" />
+          </div>
+
+          <div class="form-group-inline">
+            <label>Password:</label><br>
+            <input type="password" />
+          </div>
+          <div class="form-group-inline">
+            <button>Login</button>
+          </div>
+        </form>
+      </nav>
+    </header>
+    <div id="main-content"></div>
+    <footer id="footer">
+      <span>
+        &copy; 2019 <a href="http://www.facebook.com/john">facebook</a>
+      </span>
+    </footer>
+  </body>
+</html>

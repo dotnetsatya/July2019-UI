@@ -6,6 +6,23 @@
     <style>
       body {
         font-size: 12px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      #frstChar {
+        vertical-align: super;
+      }
+
+      #param1 {
+        letter-spacing: 10px;
+        white-space: pre;
+        /* word-spacing: 50px; */
+      }
+
+      #list1{
+        /* list-style-type: square; */
+        list-style-image: url('images/bullet.png');
+        list-style-position: inside;
       }
     </style>
   </head>
@@ -29,18 +46,28 @@
     <div id="main-content">
       <section id="mainSection">
         <h3>Main content goes here.</h3>
-        <p id="p1">
-          Param 1
-        </p>
-
-
-        <p id="p2">
-          Param 2
-        </p>
 
         <h4>
           H4 element
         </h4>
+        <p id="param1"><span id="frstChar">H</span>ello World
+          line 1 content
+          line 2 content
+          line 3 content
+          longtextlongtext
+          longtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtext
+        </p>
+        <br>
+        <br>
+
+        <ul id="list1">
+          <li>
+            Itme 1
+          </li>
+          <li>
+            item 2
+          </li>
+        </ul>
       </section>
     </div>
     <footer id="footer">

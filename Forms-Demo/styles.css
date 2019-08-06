@@ -47,6 +47,7 @@ a {
   padding: 5px 5px;
   background-color: azure;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 #topNav ul li a:hover {
@@ -72,4 +73,13 @@ button:hover {
   top: 10px;
   right: 60px;
   z-index: 9999;
+}
+
+h1 {
+  color: rgba(80, 33, 9, 0.5);
+}
+
+#headerLogin{
+  opacity: 0.5;
+  text-align: center;
 }
