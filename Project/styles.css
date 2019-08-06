@@ -1,0 +1,52 @@
+#topHeader {
+  height: 100px;
+  border: 1px solid blue;
+  border-radius: 10px;
+  padding: 10px 10px;
+  margin: 10px 10px;
+}
+
+#topNav ul li{
+    display: inline;
+}
+
+#main-content {
+  min-height: 500px;
+  border: 1px solid blue;
+  border-radius: 10px;
+  padding: 10px, 10px;
+  margin: 10px 10px;
+}
+
+#footer {
+  height: 100px;
+  border: 1px solid blue;
+  border-radius: 10px;
+  padding: 10px, 10px;
+  margin: 10px 10px;
+}
+
+.login-form{
+    width: 400px;
+    height: 300px;
+    margin: 20px 20px;
+    padding: 20px 20px;
+}
+
+.form-group{
+    padding:10px 10px;
+}
+
+.form-control{
+    height: 20px;
+    border: 2px solid darkgray;
+    border-radius: 10px;
+}
+
+.form-text-area{
+    height: 100px !important;
+}
+
+.btn-primary{
+    background-color: green;
+}

@@ -1,0 +1,35 @@
+#topHeader {
+  background-color: rgb(38, 0, 255);
+  height: 10%;
+}
+
+#topNav {
+  border: 10px solid yellow;
+  border-radius: 10px, 10px;
+  width: 50%;
+  float: right;
+}
+
+#topHeader img {
+  background-color: transparent;
+  padding-top: 5px;
+}
+
+#topNav label {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: oblique;
+  color: white;
+  clear: both;
+  text-align: center;
+}
+
+#topNav input {
+  height: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: oblique;
+  color: white;
+}
+
+body {
+  background-color: red;
+}
