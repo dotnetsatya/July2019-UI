@@ -1,20 +1,36 @@
 /* This is where you write the styles for layout */
 
+@font-face {
+  font-family: myFont;
+  src: url('la-sonnambula-demo-ffp.ttf');
+  font-weight: bold !important;
+  font-size: 100px !important;
+}
+
+
 #topHeader {
     height: 100px;
     border: 1px solid Blue;
 
-    border-left-width: 5px;
+    /* border-left-width: 5px;
     border-left-style: double;
     border-bottom-width: 10px;
-    border-bottom-color: bisque;
+    border-bottom-color: bisque; */
 
     border-radius: 10px;
     padding: 10px 10px;
     margin: 10px 10px;
     background-image: url('images/bak-image.jpeg');
+    background-size: 100%;
+    background-origin: unset;
+    box-shadow: 3px 3px 5px 6px green;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
   }
   
+  #topHeader h1 {
+    text-shadow: 10px 10px 5px rgb(243, 107, 248); 
+    font-family: myFont !important;
+  }
+
   #topNav ul {
     list-style: none;
   }
