@@ -1,0 +1,165 @@
+HTML & CSS 
+
+HTML for presenting content 
+
+CSS for style the page
+	
+
+How to work with the page(UI) behaviour?
+	e.g.
+		Read the form (UI elements)
+		Validate form fields
+		render the page content dynamically.
+		navigate between pages
+		store some data for local storage
+		..
+		..
+
+For this, we can make use of client side scripting for web pages.
+e.g.
+	JavaScript 
+
+	JavaScript libraries:
+			jQuery
+			lodash
+			React
+			
+	JavaScript frameworks:
+			Angular 
+			Vue
+			
+	Object oriented scripting for JavaScript
+			Typescript
+
+Javacript:
+
+
+Where to include JavaScript in the the HTML page? 
+
+
+* Head
+* Body 
+
+
+* Head section
+	<head>
+		<script>
+		</script>
+		<script src="filename.js"></script>
+	</head>
+
+	This get's loaded before actual page content rendered.
+
+
+* At the end of Body section
+	<body>
+		<!--conent goes here --> 
+
+
+
+		<!--end of body content -->
+		<script>
+		</script>
+	</body>
+
+Here,  the javascript is loaded after page renders.
+We would use this always
+
+
+
+Note:
+Javascript is a case sensitive.
+
+JavaScript uses  camelCasing for methods.
+
+e.g.
+	getName()
+	setName()
+	
+
+
+es5
+es6(latest)(support typescript)
+	ECMA Script
+
+
+To declare variables:
+	Use "var", "const", "let"
+
+
+var for declaring variables:
+
+var name = "satya";
+const name = "satya";
+let name = "satya";
+
+
+what is the difference between "var" and "const" declaration?
+
+	const is for declaring read only variables.
+
+
+What is scope? 
+	The accessibility and lifetime of a variable.
+
+
+Note:
+	"let" is for declaring block level scope.
+
+In Javascript, we use below statements for block level scope
+	if(){
+	}
+
+
+	for(){
+	}
+
+
+	switch(){
+	}
+
+	while(){	
+	}
+
+
+
+global
+	outside of any thing
+
+function 
+
+	inside of function
+block 
+
+	inside of block
+
+e.g.
+	for(let i = 0 ;i < 100; i++)
+	{
+		//i is only applicable here
+	}
+
+	
+
+Note:
+form elements vs document elements 
+
+for document elements:
+	innerText
+	innerHTML
+
+e.g.
+	<h1>Hello world</h1>
+		innerText
+	<h1><span>Hello world</span></h1>
+		innerHTML
+
+for form elements:
+	value
+	textbox
+	radio
+	checkout
+	
+
+
+
