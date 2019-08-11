@@ -2,25 +2,82 @@
 <html>
   <head>
     <title>Home Page</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="facebook.css" />
   </head>
   <body>
     <header id="topHeader">
       <img src="facebbok.png" />
-      <table>
-        <th>
-            Email or phone
-        </th>
-        <tr>
-            <input type="text" id="email" name="email" />
-        </tr>
-      </table>
-    </header>
-    <div id="topNav">
-      <label for="email">Email or phone</label>
-      <input type="text" id="email" name="email" />
+      <div id = "loginLabel">
+      <div id="emailStyle">
+        <label for="email">Email or phone:</label></br>
+        <input type="text" id="email" name="email"  /></br></br>
+      </div>
+      <div id="passwordStyle">
+        <label for="password">Password:</label></br>
+        <input type="password" id="password" name="password" /></br>
+        <a href = "">Forgot account?</a>
+      </div>
+      <div id="submitButton">
+        <button type="submit" id="loginButton">Log in</button>
+      </div>
     </div>
-    <div></div>
-    <footer></footer>
+    </header>
+    <div id = "main">
+    <div id="mainContent">
+      <h1>Connect with the friends and the </br> world around you on Facebook</h1>
+      <div id="smallcontent">
+        <p id="firstLine"><b>See Photos and updates</b> from friends in News Feed</p></br>
+        <p><b>Share what's new</b> in your life on yourr timeline</p></br>
+        <p><b>Find more</b> of what you're looking for with Facebook Search</p>
+      </div>
+    </div>
+    <div id="sideContent">
+      <form id="loginform">
+        <h1>Sign Up</h1>
+        <p>it's quick and easy</p>
+        <div id = "firstlastName">
+        <div id="fName">
+        <input type="text" name="firstName" id="firstName" placeholder="First name" />
+        </div>
+        <div id="lName">
+        <input type="text" name="lastName" id="lastName" placeholder="Last name" />
+        </div>
+      </div>
+      <div id="mobileorEmail">
+        <br><input type="text" name="mobile" id="mobile" placeholder="Mobile Number or Email" />
+      </div>
+      <div id="newPassword">
+        <br><input type="password" name="npassword" id="npassword" placeholder="New Password" />
+      </div>
+      <div id="DOB">
+           <br> <label>Birth Day</label>
+          <br><input type="date" id="txtDob" name="txtDob" />
+      </div>
+      <div>
+        <br><label>Gender:</label>
+        <br><input type="radio" name="male" id="male" value="Male" />&nbsp; Male
+        <input type="radio" name="female" id="female" value="Female" />&nbsp; Female
+        <input type="radio" name="custom" id="custom" value="Custom" />&nbsp; Custom
+      </div>
+      <div id="agreement">
+        <p>By clicking Sign up, you agree to our<a href="">Terms, Data Policy</a> and<br> <a href="">Cookies Policy.</a> You may receive SMS Notifications from us and<br> can opt out any time</p>
+      </div>
+      <div id="submitButton">
+        <button type="submit" id="smbtButton">Sign Up</button>
+      </div>
+      </form>
+      <br>
+      <hr>
+      <div id="createPage">
+          <a href="">Create a Page</a> for celebrity, band or business.
+      </div>
+      
+    </div>
+    </div>
+    <footer id="footer">
+      <span>
+        &copy Naresh Gunimanikula
+      </span>
+    </footer>
   </body>
 </html>

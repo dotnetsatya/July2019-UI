@@ -1,0 +1,159 @@
+body{
+    background-color: #F3F3F3; 
+}
+
+#topHeader{
+ border: 1ch solid #1B1BDB;
+ border-radius: 1ch 1ch;
+ height: 10ch;
+ background-color: #1B1BDB;
+}
+
+#topHeader img{
+    max-height: 100%;
+    padding-left: 15ch;
+    opacity: 0.5;
+}
+
+ #loginLabel{
+    padding-top: 2ch;
+    padding-right: 25ch;
+    float: right;
+    color: white;
+    /* display: inline-block; */
+} 
+
+#firstLine{
+    padding-top: 5ch;
+}
+
+/* #forgotAccount a{
+    display: inline-block;
+    float: right;
+} */
+
+#emailStyle{
+    display: inline-block;
+    padding-right: 1ch;
+    
+    /* float: right; */
+
+}
+
+#passwordStyle{
+    display: inline-block;
+    padding-right: 1ch;
+}
+
+#passwordStyle a{
+    color: white;
+}
+
+/* #loginLabel input{
+    display: inline-block;
+} */
+
+ #submitButton{
+    display: inline-block;
+    background-color: lightblue; 
+     /* width: 10%; */
+}  
+
+#loginButton{
+    /* display: inline-block; */
+    background-color: #1B1BDB;
+    color: white;
+}
+
+#main{
+    display: inline-block;
+    padding-top: 10px;
+    background-color: #F3F3F3;
+}
+
+#mainContent{
+    /* border: 1ch solid rgba(173, 216, 230, 0.425); */
+    height:500px;
+    /* padding-right: px; */
+    width: 650px;
+    float: left;
+}
+
+#smallcontent p{
+    text-align: center;
+}
+
+#mainContent h1{
+    text-align: center;
+    padding-top: 1ch;
+}
+
+#sideContent {
+    /* border: 1ch solid rgb(230, 173, 173); */
+    height: 700px;
+    width: 650px;
+    float: right;
+}
+
+#loginform{
+    padding-left: 5ch;
+}
+
+#firstlastName{
+    display: inline-block;
+}
+
+#fName{
+    display: inline;
+    padding-right: 5ch;
+    
+}
+
+#lName{
+    display: inline;
+}
+
+#firstName{
+    height: 30px;
+    background-color: white;
+}
+
+#lastName{
+    height: 30px;
+    background-color: white;
+}
+
+#mobile{
+    height: 30px;
+    width: 63.5%;
+}
+
+#npassword{
+    height: 30px;
+    width: 63.5%;
+}
+
+#txtDob{
+    height: 30px;
+    width: 30%;
+}
+
+#submitButton{
+    width: 30%;
+}
+
+#smbtButton{
+    width: 80%;
+    height: 30px;
+    background-color: green;
+    color: white;
+}
+
+#createPage{
+    text-align: center;
+}
+
+#footer{
+    padding-top: 5ch;
+    text-align: center;
+}
