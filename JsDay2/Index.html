@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Demo</title>
+    <style>
+      table {
+        border: 1px solid green;
+        border-radius: 10px;
+        padding: 10px 10px;
+        margin: 10px 10px;
+      }
+
+      table tr th {
+        font-weight: bold;
+        font-family: monospace;
+        background-color: #b5b5b5;
+      }
+
+      table tr {
+        background-color: antiquewhite;
+      }
+
+      table tr:nth-child(2n) {
+        background-color: cyan;
+      }
+
+      table tr td {
+        padding: 5px 5px;
+        margin: 5px 5px;
+      }
+
+      ul li {
+        background-color: blueviolet;
+      }
+
+      ul li:nth-child(2n) {
+        background-color: burlywood;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="loginForm" name="loginForm">
+      <div>
+        <label for="txtUsername">Username:</label>
+        <input type="text" id="txtUsername" name="txtUsername" />
+      </div>
+
+      <div>
+        <label for="txtPassword">Password:</label>
+        <input type="password" id="txtPassword" name="txtPassword" />
+      </div>
+      <div>
+        <button type="button" id="btnLogin" onclick="validateLogin()">
+          Login
+        </button>
+      </div>
+    </form>
+    <br />
+    <br />
+    <div id="container"></div>
+
+    <div id="employeeData"></div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
