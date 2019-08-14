@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Js Demo</title>
+    <style>
+      .btn-danger {
+        background-color: red;
+        border: 2px solid red;
+        border-radius: 10px;
+      }
+
+      .btn-primary {
+        background-color: green;
+        border: 2px solid green;
+        border-radius: 10px;
+      }
+
+      .btn-secondary {
+        background-color: gray;
+        border: 2px solid gray;
+        border-radius: 10px;
+      }
+
+      table {
+        border: 1px solid blue;
+        border-radius: 10px;
+        padding: 10px 10px;
+        margin: 10px 10px;
+      }
+
+      table tr th {
+        font-family: monospace;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      table tr:nth-child(2n) {
+        background-color: bisque;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="topHeader"></h1>
+    </header>
+
+    <div id="container">
+      <button id="btnAddNew" type="button">Add New</button>
+      <div id="grid"></div>
+      <div id="employeeFormContainer">
+        <form id="formEmployee" name="formEmployee">
+          <div>
+            <label for="txtId">Employee Id:</label>
+            <input type="text" id="txtId" name="txtId" />
+          </div>
+
+          <div>
+            <label for="txtName">Employee Name:</label>
+            <input type="text" id="txtName" name="txtName" />
+          </div>
+          <div>
+            <label for="txtJobTitle">Job Title:</label>
+            <input type="text" id="txtJobTitle" name="txtJobTitle" />
+          </div>
+
+          <div>
+            <label for="txtSalary">Salary:</label>
+            <input type="text" id="txtSalary" name="txtSalary" />
+          </div>
+          <div>
+            <button type="button" id="btnSave">Save</button>
+            &nbsp;&nbsp;
+            <button type="reset" id="btnCancel">Cancel</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="employeeReadView">
+
+      </div>
+    </div>
+
+    <script src="store.js"></script>
+  </body>
+</html>

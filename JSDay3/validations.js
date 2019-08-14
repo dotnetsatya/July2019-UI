@@ -28,5 +28,7 @@ var myArray = [10, 20, 30];
 
 // myArray.shift();
 // console.log(myArray);
+
+//To remove at given index
 myArray.splice(1,1);
 console.log(myArray);
