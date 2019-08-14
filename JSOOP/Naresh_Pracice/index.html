@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OOP DEMO</title>
+    <Style>
+      table { border: 1px solid blue; border-radius: 10px; padding: 10px 10px;
+      margin: 10px 10px; } table tr th { font-family: monospace; font-size:
+      14px; font-weight: bold; } table tr:nth-child(2n) { background-color:
+      bisque; }
+    </Style>
+  </head>
+  <body>
+    <header>
+      <h1 id="topHeader"></h1>
+    </header>
+    <div id="container">
+      <button type="button" id="btnAddNew">Add New</button>
+      <div id="grid"></div>
+      <div id="employeeFormContainer">
+        <form id="formEmployee" name="formEmployee">
+          <div>
+            <label for="txtId">Employee id:</label>
+            <input type="text" name="txtId" id="txtId" />
+          </div>
+          <div>
+            <label for="txtName">Employee Name:</label>
+            <input type="text" name="txtName" id="txtName"/>
+          </div>
+          <div>
+            <label for="txtJobTittle">Job Tittle:</label>
+            <input type="text" name="txtJobTittle" id="txtJobTittle"/>
+          </div>
+          <div>
+            <label for="txtSalary">Salary:</label>
+            <input type="text" name="txtSalary" id="txtSalary" required/>
+          </div>
+          <div>
+              <button type="button" id="btnSave">Save</button>&nbsp;&nbsp;
+              <button type="reset" id="btnCancel">Cancel</button>
+          </div>
+        </form>
+      </div>
+      <div id="employeeReadView">
+
+      </div>
+    </div>
+
+    <script src="store.js"></script>
+  </body>
+</html>
