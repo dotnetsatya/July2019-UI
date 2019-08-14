@@ -13,28 +13,29 @@ var store = {
   ],
   addEmploye: function(employee) {
     this.employeeData.push(employee);
-    localStorage.setItem('employeeData', JSON.stringify(store.employeeData));
+    localStorage.setItem("employeeData", JSON.stringify(store.employeeData));
   },
   deleteEmployee: function(id) {
     for (var idx = 0; idx < this.employeeData.length; idx++) {
       if (this.employeeData[idx].employeeId == id) {
         this.employeeData.splice(idx, 1);
-        localStorage.setItem('employeeData', JSON.stringify(store.employeeData));
+        localStorage.setItem(
+          "employeeData",
+          JSON.stringify(store.employeeData)
+        );
         break;
       }
     }
   }
 };
 
-function initilize(){
-  if(localStorage.getItem('employeeData') != null)
-  {
+function initilize() {
+  if (localStorage.getItem("employeeData") != null) {
     // get data from local storage
-    store.employeeData =JSON.parse(localStorage.getItem('employeeData'));
-
-  }else{
+    store.employeeData = JSON.parse(localStorage.getItem("employeeData"));
+  } else {
     //Save in the localStorage first time
-    localStorage.setItem('employeeData', JSON.stringify(store.employeeData));
+    localStorage.setItem("employeeData", JSON.stringify(store.employeeData));
   }
 }
 function loadData(gridData) {
@@ -61,7 +62,6 @@ function loadData(gridData) {
 }
 
 window.onload = function() {
-
   initilize();
 
   document.getElementById("topHeader").innerHTML = store.appName;
