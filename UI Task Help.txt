@@ -1,0 +1,79 @@
+javascript:
+
+function TelephoneDirectory(){
+	this.appName = "Online Telephone Directory";
+	this.version = 1.0;
+
+	this.users = [{userId: 1, username: 'admin', password: 'admin', email: 'admin@gmail.com', mobile: '124444'}];
+
+	this.telephoneContacts = [ {contactId: 1, firstName: 'satya', lastName: 'palakurla', email:'satya@gmail.com', address: 'RI', userId: 1}];
+
+	
+
+	this.addUser = function(user){ 	
+		user.userId = this.users.length + 1;
+
+		this.users.push(user);
+	}
+
+	this.getUserById = function(id){
+	}
+
+
+	this.getUserByUsername = function(username) {
+	}
+
+
+	this.deleteUser = function(username){
+	}
+
+	this.updateUser = function(user) {
+	}
+
+	
+	this.resetPasword = function(username, passsword) {
+	}
+
+
+
+	this.addContact = function(userId, contact){
+
+		contact.userId = userId;
+		contact.contactId = this.telephoneContacts.length + 1;
+		this.telephoneContacts.push(contact);
+	}
+
+
+	this.deleteContact = function(contactId) {
+	}
+
+
+	this.updateContact = function(contact){
+	}
+
+
+	this.getContactByContactId = function(contactId){
+	}
+
+
+	this.getConactsByUserId = function(userId){
+	}
+	
+	...
+	..
+
+	
+}
+
+
+
+var telObj = new TelephoneDirectory();
+
+telObj.users;
+
+telobj.telephoneContacts
+
+telObj.addUser()
+
+..
+..
