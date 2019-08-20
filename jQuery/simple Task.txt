@@ -1,0 +1,205 @@
+JavaScript: 
+
+Exception Handling 
+
+
+Timing functions:
+
+	setTimeout()
+	clearTimeout()
+
+
+	setInterval()
+	clearInterval()
+
+
+
+setTimeout()
+	To invoke a method with some delay, we use this.
+	It inokes just once. 
+
+
+setInterval()
+	To invoke a method again and again with some interval.
+
+
+
+how to use => operator in JavaScript for inline methods?
+
+() => {}
+
+(arglist) => {}
+
+(arg1, arg2) => {}
+
+
+function(){
+}
+
+
+----------
+Using setInterval(), implement ad banner on the UI 
+e.g.
+
+Take list of images( 10 images)
+	img1
+	img2
+	...
+	...
+
+As soon as page is loaded, start with the first image
+then, for every second, load next image 
+
+tip:
+
+<body>
+	<div id="ads">	
+		<img src="img1.jpg" id="ad"/>
+	</div>
+</body>
+
+scripts:
+	
+var imageIndex = 1;
+
+setInterval(function() {
+	var imagePath = "img"+ imageIndex;
+	document.getElementById("ad").src = imagePath;
+	imageIndex++;
+
+	if(imageIndex == 10){
+		imageIndex = 1;
+	}
+}, 1000);
+===================
+Project:
+	scripts.js
+		var app = {
+
+			users : [],		
+
+			addUser : function(user) {
+				this.users.push(user);
+				localStorage.setItem("userInfo") = JSON.stringfy(this.users);
+			}
+			.
+			..
+			..
+		
+			validateUser: function(username, passwword) {
+				if(
+			}
+		}
+
+Reg.html
+	submit
+		var obj = {};
+	obj.id
+	obj.name
+	..
+	..
+	
+	app.addUser(obj);
+	
+====================================
+
+
+Tips for project:
+
+reg.html
+log.html
+home.html
+default.html
+logut.html
+..
+..
+..
+
+common script file:
+
+store.js
+	This is where you are storing and manipulating data
+
+e.g.
+	var store = {
+		userData: [],
+		contactsData: [],
+		initializeUserData: function() {
+			if(localStorage.getItem('userData') !=null && localStorage.getItem('userData') !='undefined') {
+
+				this.userData = JSON.parse(localStorage.getItem('userData');
+			}else{
+				localStorage.setItem('userData', JSON.stringfy(this.userData));
+			}
+
+		},
+		initializeContactData: function() {
+if(localStorage.getItem('contactData') !=null && localStorage.getItem('contactData') !='undefined') {
+
+				this.contactsData = JSON.parse(localStorage.getItem('contactData');
+			}else{
+				localStorage.setItem('contactData', JSON.stringfy(this.contactsData));
+			}
+
+		}
+
+		
+		addUser: function(user) {
+
+			//add user and put localStorage
+		},
+		updateUser: function(user) {
+
+		//update user and put in localStorage
+		},
+		getUser: function(username) {
+		}
+		validateUser: function(username, password){
+		}
+		
+	};
+
+
+
+now, add this script file all of the html pages.
+
+for reg.html, you create a new javascript file:
+	reg.js
+
+	document.onload = function() {
+
+	store.initializeUserData();
+
+	store.initializeContactsData();
+
+
+	submitton.click()	{
+	}
+
+	}
+
+reg.html
+	<script src =" store.js"></scripts>
+
+
+
+log.html
+	<script src="store.js"></script>
+	<script src = "log.js"</script>
+
+
+log.js
+
+	store.initializeUserData();
+	store.initializeContactsData();
+
+
+	logbutton.click() {
+
+		store.validateUser(usename,pass2ord)
+	}
+
+
+
+
+
