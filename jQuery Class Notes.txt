@@ -1,0 +1,1362 @@
+We worked on different Client Side Web technologies:
+	HTML
+	CSS
+	JavaScript 
+	JavaScript OOP 
+
+
+HTML : 
+	It is for designing static web pages 
+	It is used for displaying static content on the Web page. 
+	We use HTML tags to display the content on the web page.
+
+
+CSS : Cascading stylesheet. 
+	It is for applying styles(look & feel) for the HTML tags.
+
+HTML & CSS are static by default.
+
+
+HTML5/CSS3 : Includes dymaic styles /dynamic content.
+
+e.g.
+	HTML 5:
+		Audio
+		Video
+		Application caching
+		localStroage
+		sessionStorage
+
+		HTML 5 form( web forms 2.0)
+			New Input type elements (email,number,tel, range, url, date, time,..)
+		HTML 5 new attributes form:
+			required
+			placeholder
+			pattern
+			min
+			max
+			..
+
+
+	CSS 3
+		border-radius
+		border-image
+		box-shadow
+		outline
+
+		...
+
+
+
+To add some more dynamic behaviour , we write some code using javascript.
+
+JavaScript : 	
+	It is used to add dynamic content to the web page. 
+	It is a client side script. 
+	dynamic content 
+	dynamic styles
+	form validation 
+	animation 
+	store data
+
+Today will discuss jQuery 
+-----------------------
+What is jQuery ?
+Why jQuery ? 
+How to work with jQuery?
+
+
+
+HTML is static 
+CSS is also Static.
+
+To make the web site dynamic ,we need to add client script or server script to the web page.
+
+
+We can use JavaScript as client side script and we can make our website dynamic for client side interactions.
+
+what can we do with JavaScript ? 
+	* we can add dynamic content to the web page. 
+	* we can read/write data from/to web page. 
+	* we can manipulate the form fields
+	* we can perform validations
+	* we can apply styles dynamically
+	* we can navigate dynamically.
+	* we can detect the browsers and display the content as per the browser.
+	* We can store data client side (cookies ,localStorage,sessionStorage).
+	and can resuse that data in the sub-sequent requests.
+
+how to do this ? 
+
+we use <script> tag to add javaScript to the web page. 
+
+syntax: - 
+	<html>
+		<head>
+			<title>javascript demo</title>
+			<script type="text/javascript">
+				//add the script here
+			</script>
+		</head>
+		<body>
+		</body>
+	</html>
+
+Note : 
+	To do any thing in javaScript, we must write the script manually.
+	e.g. 
+		To read/write text from page, we must 			write the script. 
+		To perform events , we must write some javascript function ,and we should call that function by using HTML event handlers.
+
+	Here,every functionality we must write manually. 
+	we don't have any pre-defined library for JavaScript by default. 
+
+
+
+For this purpose, we use jQuery API.
+
+What is jQuery ? 
+	It is a JavaScript Library file(API). 
+	It provides set of in-built functions. 
+	we can download the jQuery file and embedd into the html page and we can call the jQuery functions directly.
+	In case of jQuery, for most of the functionalites we need not to write the script manually.
+	we can directly use the jQuery functions. 
+
+
+e.g.
+	for DOM manipulation : 
+			html()
+			text()
+			append()
+			after()
+			before()
+			val()
+
+	for CSS manipulation: 
+		css()
+		addClass()
+		removeClass()
+		hasClass()
+		
+
+	for event handling : 
+		click()
+		dblclick()
+		focus()
+		mouseover()
+		mouseout()
+		..
+
+	effects : 
+		show()
+		hide()
+		toggle()
+		slideUp()
+		slideDown()
+		fade()
+		fadeIn()
+		fadeOut()
+		fadeTo()
+		slideToggle()
+		animate()
+
+	ajax : 
+		get()
+		post()
+		getJSON()
+		getScript()
+		load()
+		ajax()
+
+
+syntax : - 
+	<html>
+		<head>
+			<title>page title</title>
+		<script type="text/javascript" src="filename.js">
+		</script> 
+
+		</head>
+		<body>
+		</body>
+	</html>
+
+
+how to download jQuery file ? 
+
+open the browser and enter the jQuery url: 
+
+http://www.jquery.com 
+
+OR
+ you can use NuGet tool for downloading jQuery in Visual Studio.
+
+Then click on download 
+
+
+
+Advantages of jQuery 
+-------------------
+	* It provides pre-defined functions 
+	* It separates HTML content and client side script. 
+	* It simplyfies the script. 
+	* it is a light-weight (size in kb's) 
+
+
+
+DOM Manipulation 
+----------------
+In case of JavaScript, we read/write elements by using DOM objects 
+
+e.g.
+	document.getElementById().innerHTML
+			innerText
+
+
+But ,in case of jQuery, we use JQuery Selectors to find any element in HTML and we use jquery functions to manipulate the content. 
+
+e.g. 
+	$("#YourElementID").show();
+	$("#yourElementID").hide();
+	$("#yourElementID").action();
+
+
+
+Event Handling:
+---------------
+	In case of javaScript,we define the functions in <script> section. 
+	And we call that functions by using Event Handlers(attributes) of the HTML elements.
+
+e.g. 
+	<script>
+		function greet()
+		{
+		}
+	</script>
+
+
+	<a href="" onclick="greet()">click Me</a>
+
+	onclick=""
+	onfocus=""
+	onsubmit=""
+	onblur=""
+	onload=""
+	onmouseover=""
+	onmouseout =""
+
+
+OR
+	document.getElementById("btnSubmit").addEventListner("click", function() {
+	});
+
+
+
+
+
+But, in case of Jquery, we find the element by using JQuery Selector and we can bind the events to that element by using jquery methods(click,dblclick,mousemove and etc..) 
+
+e.g. 
+	<script>
+		$("#a1").click(function()
+		{
+			//here your script goes
+		});
+	</script>
+
+	<a id="a1" href=""> click Me</a> 
+
+
+Ajax Interactions 
+----------------
+(will discuss later in-detail)
+	
+
+ajax:
+	get()
+	post()
+	getScript()
+	..
+	...
+
+Syntax : - Ready() 
+$(document).ready(function(){
+	//script goes here...
+});
+--This is with anonymous function 
+
+
+$(document).ready(functionname); -- ths is with named function 
+
+function functioname()
+{
+	//this is executed when the document is ready 
+}
+
+OR 
+$(functionaame);
+	this is named function 
+
+$(function(){
+	//script goes here...
+});
+
+this is anonymous function 
+
+
+jQuery Selector 
+---------------
+	What is selector? 
+		It is used to select the HTML element in jquery. 
+		It is used to find the exact element/attribute from your html document. 
+
+syntax : -
+	$(selector).action();
+
+Note : 
+
+JQuery Supports all the CSS Selectors
+
+CSS Selectors 
+--------------
+	In CSS,we use selectors for selecting a specific OR group of elements and apply css properties. 
+
+
+
+We have various CSS Selectors 
+---------------------------
+	* HTML element as a selector 
+	* ID as a selector 
+	* CLASS as a selector 
+	* Grouped Selector 
+	* Contextual Selector 
+	* parent/Child Selector 
+	* attribute selector 
+	* seudo classes 
+
+
+
+HTML Element as a Selector 
+--------------------------
+	Here, The css properties are applied to all the instances of a specific element. 
+	e.g. 
+		<p> : for all paragraphs 
+		<b> : for all bold text 
+		<div> : for all div tags
+		...
+		...
+syntax : in case of CSS 
+-----------------------
+	<style>
+		ElementName
+		{
+			property:value;
+			........
+		}
+	</style>
+
+
+Syntax : In case of Jquery 
+--------------------------
+	$("elementName").action();
+e.g.
+	$("p").hide(); it hides all the paragraphs
+	$("a").hide(); it hides all the anchors 
+	$("div").hide() ; it hides all the div 
+	$(":button").hide() : it hides all the input type button		
+	$(":text").css("color","#ffffff");
+	
+for button:
+	<button>click me</button>
+		for this ,in jquery: $("button").action();
+
+	<input type="button" value="clickMe"/>
+		for this, in jquery: $(":button").action();  //button 
+			$(":submmit")
+			$(":refresh")
+			$(":button")
+
+$(":text").action(); textbox
+$(":checkbox").action(); checkbox
+	Element selector applies to that elements.
+
+Note:
+In the element selector, the action is applied to all the instances of that element.
+
+
+
+Example program 
+---------------
+	
+<!doctype html>
+<html>
+	<head>		
+		<title>jquery demo</title>
+		<script type="text/javascript" src="JQuery.js">
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function()
+			{
+				$("p").click(function()
+				{
+					$(this).hide();
+				});
+	
+			$("div").click(function()
+				{
+					$(this).hide();
+				});	
+			
+				$("span").click(function()
+				{
+					$(this).hide();
+				});
+				$(":button").click(function()
+				{
+					$(this).hide();
+				});		
+			});
+		</script>
+	</head>
+	<body>
+		<form name="form1">
+			<p>click me to hide</p> 
+			<div>click me to hide</div>
+			<span>click me to hide</span>
+		<br/>
+			<input type="button" value="clickMe to hide"/> 
+		</form>
+	</body>
+</html>
+
+ID as a Selector
+----------------
+	It is  used to select(find) a specific element with a specif id.(single element)
+
+Syntax: in case of CSS
+----------------------
+	<style>
+		#YourID
+		{
+			property:value;
+		}
+	</style>
+
+Syntax : in case of JQuery 
+--------------------------
+	$("#YourID").action();
+e.g.
+	$("#a1").hide();
+
+
+Note:
+jQuery Selector is the case sensitive.
+
+Example
+--------
+<!doctype html>
+<html>
+	<head>		
+		<title>jquery demo</title>
+		<script type="text/javascript" src="JQuery.js">
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function()
+			{
+				$("#b1").click(function()
+				{
+			var user=$("#txtuser").val();
+			$("#s1").text("Welcome "+user);	
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<form name="form1">
+			User Name :<input type="text" id="txtuser"/> <br/> 
+		<input type="button" value="clickMe" id="b1"/> 
+	<br/> 
+	<span id="s1">
+	</span>
+		</form>
+	</body>
+</html>
+
+CLASS as a selector
+------------------
+	It is used to select a group of elements. 
+
+Syntax : in case of CSS
+-----------------------
+	<style>
+		.YourClassName
+		{
+			property:value;	
+		}
+	</style>
+
+Syntax:- in case of JQuery 
+-------------------------
+	$(".className").action();
+
+e.g. 
+	$(".bold").action();
+
+
+Example
+--------
+<!doctype html>
+<html>
+	<head>		
+		<title>jquery demo</title>
+		<script type="text/javascript" src="JQuery.js">
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function()
+			{
+				$("#a1").click(function()
+				{					$(".green").css("background-color","green");
+$(".blue").css("background-color","blue");	
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<form name="form1">
+			<p id="p1" class="green">
+				Marlabs Software
+			</p> 	
+			<p id="p2" class="blue">
+
+			Mysore Training Center
+			</p>
+			<a id="a1" href="javascript:void(0)">apply styles</a>
+
+		</form>
+	</body>
+</html>
+
+----------
+Grouped Selector
+--------------
+	It is used to select multiple elements 
+syntax : in case of CSS 
+--------------------
+	<style>
+		element1,element2,...
+		{
+			property:value;
+		}
+	</style>
+
+syntax : in case of jquery 
+--------------------------
+	$("element1,element2,...).action();
+		Or
+	$("selector1,selector2,...).action();
+
+
+Example
+--------
+<!doctype html>
+<html>
+	<head>		
+		<title>jquery demo</title>
+		<script type="text/javascript" src="JQuery.js">
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function()
+			{
+				$("#b1").click(function()
+				{				$("h1,p").css("color","green");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<form name="form1">
+			<h1>Welcome Maralabs</h1>
+			<p>Marlabs Software</p> 
+
+			<input type="button" value="Apply styles" id="b1"/> 
+		</form>
+	</body>
+</html>
+
+----------
+Contextual Selector 
+------------------
+	It is used to select an element in a specific context. 
+	$("p").action(); it applies to all paragraphs.
+	$("p.test").action(); it applies to paragraph with class test.
+	$(".test").action(); It applies to all the elements whose class is test
+
+	parent /child is also one kind of contextual.
+
+
+	
+syntax :- in case of CSS
+-------------------------
+	<style>
+		parentelement childelement
+		{
+			property:value;
+		}
+	</style>
+
+syntax : in case of jquery 
+--------------------------
+	$("parent child).action();
+
+Note : 
+	To get all the child nodes, we space( )
+	To get only direct childs ,we use right angle bracket(>)
+
+
+e.g.
+	<div id="div1">
+		<b>direct bold</b>
+		<i>direct italic</i>
+		<div id="div2">
+			<b>in-direct bold</b>
+			<i>in-direct italic</i>
+				<div id="div3">
+					<b>bold</b>
+					<i>italic</i>
+				</div>
+		</div>
+	</div>
+
+jquery script :
+		$("#div1 > b").css("color","red");
+			it applies to only direct child(b).
+		$("#div1 b").css("color","green");
+			It applies to all childs (b)
+
+
+	
+
+Example
+-------
+<!doctype html>
+<html>
+	<head>		
+		<title>jquery demo</title>
+		<script type="text/javascript" src="JQuery.js">
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function()
+			{
+				$("#b1").click(function()
+				{
+$("b").css("color","red");
+$("div  b").css("color","green");
+
+			
+				});	
+			});
+		</script>
+	</head>
+	<body>
+		<form name="form1">
+
+			<b>
+				Marlabs ,New Jersry
+			</b>
+		<br/> 
+			<div id="d1">
+				Marlabs Software
+				<b>JQuery Training</b>
+			</div>
+			
+	<input type="button" value="click for styles" id="b1"/> 
+
+		</form>
+	</body>
+</html>
+
+
+Find Elements with a specific attribute
+--------------------
+attribute selector 
+--------------------
+
+syntax : - 
+	$("[AttributeName]").action();
+e.g. 
+	<a href="http://www.marlabsl.com">clickMe</a> 
+	<a title="marlabs">click Me</a> 
+
+		$("[href]").hide();
+		$("[title]").hide();
+
+
+Find Elemements with specific value with a specific attribute
+--------
+Syntax :-
+	$("elementName[AttributeName='value']").action();
+
+e.g.
+	<a href="url" target="_blank">google</a>
+	<a href="url" target="_top">yahoo</a> 
+
+	$("a[target='_blank']").text("google site");
+	$("a[target='_top']").text("yahoo.com");
+
+
+
+Parent/Child relatinship selector
+-------------------------------
+	We can use jquery selectors to select elements under a parent element. 
+	Here, we have two altarnatives.
+	
+	* direct childs
+	* In-direct chids(all childs).
+
+e.g. 
+	<div id="MainParent">
+		<b>bold : direct child</b>
+		<i> italic : direct child</i>
+		<div id="ChildParent">
+			<b>bold : in-direct child </b> 
+			<i>bold : in-direct chiild</b> 
+		</div>
+	</div>
+how to select only direct childs
+how to select all childs 
+
+
+Syntax : for direct childs 
+--------------------------
+	$("parentElement > childElement").action();
+
+e.g.
+	$("div > b").hide();
+	$("div > i").hide();
+
+
+syntax : for all childs
+-----------------------
+	$("parentElement childElement").action();
+e.g.
+	$("div b").hide();
+
+EXample
+-------
+<!doctype html>
+<html>
+	<head>		
+		<title>jquery demo</title>
+		<script type="text/javascript" src="JQuery.js">
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function()
+			{
+	$("#b1").click(function()
+	{
+$("#divTestArea1 > b").css("color", "blue");
+$("#divTestArea1 i").css("color","red");
+	
+			});
+		});
+
+		</script>
+	</head>
+	<body>
+		<form name="form1">
+<div id="divTestArea1">
+        <b>Bold text</b>
+        <i>Italic text</i>
+        <div id="divTestArea2">
+                <b>Bold text 2</b>
+                <i>Italic text 2</i>
+                <div>
+                        <b>Bold text 3</b>
+                </div>
+        </div>
+</div>
+
+<input type="button" value="click Me" id="b1"/> 
+
+		</form>
+	</body>
+</html>
+
+
+Event Handling in Jquery 
+-------------------------
+	In case of Jquery event handling, we use methods for calling javascript functions or jquery code. 
+
+e.g.
+	for onclick: click() 
+	for ondblclick : dblclick()
+	for onmousemove(): mousemove() 
+
+mouseover()
+mouseup()
+keypress()
+
+	...
+	..
+
+like this,for every event handler of each element, we have jquery functions.
+
+so that, instead of event handler attribute of element, we use jquery method for event handling. 
+
+syntax : - 
+	$(selector).method();
+
+e.g.
+	$("a").click();
+	$("a").mousemove();
+	$("a").mouseover();
+	$("a").mouseout();
+	...
+	...
+
+Note : - 
+	To the event handler , we can assign a named function or anonymous function. 
+
+syntax : for named function 
+
+	$(selector).eventName(functionName);
+e.g. 
+	function foo()
+	{
+		alert("hi");
+	}
+	$("#p1").click(foo);
+
+<p id="p1">
+	Marlabs 
+</p>
+
+syntax: - for anonymous function 
+---------
+
+	$(selector).eventName(function()
+	{
+		//script goes here
+	});
+
+
+e.g. 
+	<input type="button" value="clickMe" id="b1"/> 
+
+	$("#b1").click(function()
+	{
+		alert("clicked on button");
+	});
+
+
+
+How to call the function on a specific event
+--------------------------------------------
+we can call a  function with funtion name,if the function is named. 
+Otherwise ,we go for anonymous function. 
+
+syntax : - 
+
+	$(selector).click(functionName);
+		//This is named function 
+
+
+	$(selector).click(function()
+	{
+		//this is for anonymous function 
+	});
+
+
+
+
+jQuery Name conflict
+----------------------
+	In case of jQuery, we use $ sign to define the JQuery syntax . 
+	If we add some library to our html page and if it contains same $ sign to use these functions, we get name conflict.
+
+To overcome this conflict, The jQuery allows us to change jQuery syntax from $ sign to some other name. 
+
+
+Syntax : - 
+jQuery.noConflict();
+
+If you specify this method, you can use jQuery in place $ sign. 
+
+e.g.
+	jQuery("p").hide();
+	jQuery("p").css("color","red");
+
+
+
+
+Syntax : - 
+var jq = jQuery.noConflict();
+
+here, we use jq instead of $ sign.
+And you can also give any other name. for sample, i gave jq
+
+
+
+e.g. 
+	jq("p").hide();
+	jq("p").css("color","red");
+
+You can use any of these two syntaxes.
+
+
+Example for mouseover
+---------------------
+<!doctype html>
+<html>
+	<head>
+		<title>jquery demo</title>
+		<script type="text/javascript" src="JQuery.js">
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function()
+			{
+			$("#d1").mouseover(function()
+			{
+				$(this).css("background-color","silver");
+			});
+
+			$("#d1").mouseout(function()
+			{
+		$(this).css("background-color","red");
+			});
+
+			});
+		</script>
+	</head>
+	<body>
+		<div id="d1" style="height:100px;width:100px;">
+			Marlabs Software
+		</div>		
+	</body>
+</html>
+
+
+jQuery Animations(effects)
+--------------------------------
+	As of now ,we have seen many jquery effects
+e.g.
+	show();
+	hide()
+	slideUp()
+	slideDown()
+	slideToggle()
+	toggle();
+	fadeIn();
+	fadeOut();
+	fadeTo();
+
+In All these effects only a specific style(effect) is applied at a time. 
+Instead,we need to apply custom animation. 
+That means,we need to change the style of an element from one style to other style or more styles (gradually)
+
+
+For this purpose,we use jQuery custom animation.
+
+Syntax : - 
+$(selector).animate({params},[duration],[easing],[callback]) ;
+
+
+
+Note:
+For basic animation,we just use jquery library.
+
+for color animation, we need jqueryui library
+
+
+Example for animate()
+---------------------
+<!doctype html>
+<html>
+	<head>
+		<title>jquery animation demo</title>
+		<script type="text/javascript" src="JQuery.js">
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function()
+			{
+			$("#s1").click(function()
+				{			
+						$("#d1").animate({"height":"150px","width":"150px"},1000);
+$("#d1").animate({"height":"200px","width":"200px"},1000);
+$("#d1").animate({"height":"100px","width":"100px"},1000);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="d1" style="width:100px;height:100px;background-color:silver;">
+			Marlabs Software
+		</div>
+<br/> 
+	<span id="s1">Start Animation</span>
+	</body>
+</html>
+
+
+jquery animation for making element movable
+--------------------------------------------
+	By default ,elements in HTML are static. 
+	We can't move the elements by default. 
+	To move the elements, we have to use css position property. 
+	We need to set the css position property to absolute. 
+
+syntax : -
+	<div style="position:absolute">
+	</div> 
+
+
+Example
+--------
+<!doctype html>
+<html>
+	<head>
+		<title>jquery animation demo</title>
+		<script type="text/javascript" src="JQuery.js">
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function()
+			{
+			$("#s1").click(function()
+				{			
+$("#d1").animate({ "left" : "1px","top":"10px" },1000);
+        $("#d1").animate({ "left" : "50px","top":"50px" }, 500);
+        $("#d1").animate({ "left" : "100px","top":"100px" }, 500);
+				
+				});
+			});
+		</script>
+	</head>
+	<body>
+	<span id="s1">Start Animation</span>
+	<div style="height: 40px;">	
+        <div id="d1" style="height: 100px; width: 100px; background-color: #89BC38; position: absolute;">
+		Marlabs Software
+</div>
+</div>
+
+<br/>
+<br/>
+
+	</body>
+</html>
+
+
+----------
+Jquery stop() method to stop the animation or any jquery effect 
+------
+we have several methods for jquery effect. 
+e.g.
+	show(),hide(),toggle(),slideUp(),slideDown(),slideToggle(),animate()
+
+we use all these functions to apply jquery effect. 
+
+All these functions allow two parameters.
+
+* speed
+* callback.
+
+Whenever we apply speed parameter, The effect(animation) will gradually change as per the speed. 
+The effect may take some time to finish the animation. 
+
+In the mean while of animation, to stop the effect, we use jquery stop() function. 
+
+e.g. 
+	<div	id="d1">
+	</div>
+
+	$("#d1").slideDown(1000);
+	It will take 1 sec to complete the effect. To stop this effect in between ,we use stop() function. 
+
+e.g. 
+	$("#d1").stop();
+
+Note : 
+	This stop() function will stop only the current effect(animation).
+
+	To stop all the effects(animations),we use stop(true) method. 
+
+
+syntax :-$(selector).stop(true);
+
+
+To reset the effects(animations),we use clearQueue() method.
+
+
+
+stop() ; it stops only the current effect. 
+stop(true); it stops all the effects
+clearQueue(); it resets the animations. 
+
+
+Working with JQuery HTML manipulation 
+--------------------------------------
+	In case of simple javascript, we use javaScript DOM for HTML manipulation. 
+
+DOM : 
+	document object Model 
+The javascript DOM provides various methods to find an element and read/write data to that element. 
+
+e.g. 
+	document.getElementById("").innerHTML
+	document.getelementById("").innerText 
+	document.getElementById("").value;
+	document.getElementsByName("")
+	document.getElementsByTagName()
+
+example
+---------
+	<form name="form1">
+		user : <input type="text" id="txtuser"/>
+		<br/> 
+		<span id="s1"></span>  
+	</form>
+	
+To read data from the above text, we use javascript DOM. 
+
+e.g.
+	var user=document.getElementById("txtuser").value;
+	
+To write the text on HTML element
+e.g.
+	document.getElementById("s1").innerHTML="Welcome "+user;
+
+
+This way do HTML manipulation in case of simple javascript. 
+
+In case of jQuery, we can use directly jQuery selectors and jQuery methods to read/write data on the page. 
+
+e.g. 
+<form name="form1">
+	username : <input type="text" id="txtuser"/> <br/> 
+	<input type="button" value="clickMe" id="b1"/> <br/> 
+	<span id="s1"></span> 
+</form>
+
+To read value from textbox and print in the span,we use bellow jQuery code. 
+
+e.g. 
+	$(document).ready(function()
+	{
+		$("#b1").click(function()
+		{
+			var user=$("#txtuser").val();
+			$("#s1").html("<b>Welcome :"+user+"</b>");
+		});
+	});
+
+Here, we used val() and html() function of Jquery for read/write operation.
+
+
+jQuery functions for HTML manipulation
+--------------------------------------
+html() 
+	It is similar to innerHTML in DOM 
+	It allows us to add dynamic content(plain text as 	well as some markup) to the specific element.
+	If that element has some conent, html() will 				replace that content. 
+	we can also read content from the given element. 
+
+syntax : - 
+	$(selector).html("sometext"); //write 
+	$(selector).html(); //read 
+
+
+text()
+-----
+	It is similar to innerText
+	It allows to read/write only plain text. 
+	It does not allow any markup. 
+
+syntax :- 
+	$(selector).text("someText"); //write 
+	$(selector).text(); //read 
+
+val()
+-----
+	It is used to read/write data from/to HTML form input types.
+
+syntax : - 
+	$(selector).val("somevalue"); //write 
+	$(selector).val();//read 
+e.g. 
+	<input type="text" value="satya" id="txtuser"/> 
+
+	$("#txtuser").val("Marlabs"); //replace satya with 				marlabs
+
+	$("#txtuser").val(); //get the value of textbox 			with id="txtuser"
+
+
+Like this ,we have many methods for HTML maniplation : 
+
+after()
+before()
+append()
+prepend()
+
+
+Get /Set the value of an attribute of a specific element 
+-----------------------------------------------------
+	for this purpose,we use attr() function of jQuery 
+
+syntax : - 
+	$(selector).attr("attributeName"); //get value of 			the given attribute.	
+
+$(selector).attr("AttributeName","attributeValue");
+		// for set the value to an attribute
+
+setting multiple attributes 
+---------------------------
+
+syntax : - 
+	$(selector).attr({"attributeName1":"attributevalue","attributeName2":"value",...});
+
+Example
+-------
+<a href="http://www.google.com" id="aGoogle3">Google Link</a>
+<script type="text/javascript">
+$(function()
+{
+        $("#aGoogle3").attr(
+        { 
+                "href" : "http://www.google.co.uk", 
+                "title" : "Google.co.uk"
+        });
+});
+</script>
+
+CSS Manipulation with jQuery 
+----------------------------
+
+how can we apply css by using simple javascript?
+
+
+css : cascading style sheet
+	It is used to apply styles to the HTML tags. 
+	It is a static. 
+
+
+
+To apply the styles dynamically ,we use javascript style object. 
+
+syntax : - 	document.getElementById("yourID").style.property=value;
+
+e.g. 
+	<div id="d1">Marlabs</div>
+		to apply color dynamically to this element,we use the bellow code. 
+
+	document.getElementById("d1").style.color="red";
+
+
+
+To simplify this,we use jquery css() method. 
+
+
+css() method
+---------
+	It is used to apply css dynamically. 
+
+syntax : - 
+		$(selector).css("property");
+			//get the value of given property 
+
+		$(selector).css("property","value");
+			//set the css property 
+
+syntax: - setting multiple css properties 
+
+	$(selector).css({properties});
+
+
+e.g.
+	$("p").css("color","red");
+	$("p").css({"color":"red","font-size":"12px"});
+
+----------
+Adding/Removing CSS classes dynamically by using JQuery 
+------------------------------------------------------
+
+how to create CSS class?
+
+syntax : - 
+	<style type="text/css">
+		.className
+		{
+			property:value;
+		}
+	</style>
+
+e.g.
+	<style type="text/css">
+		.bold
+		{
+			font-weight:bold;		
+		}
+		.blue
+		{
+			color:blue;
+			font-family:verdana;
+		}
+	</style>
+
+how to apply css class to html element at design time 
+----------------------------------------------------
+syntax : - 
+	<element class="cssClassName">content</element>
+
+e.g.
+	<span class="bold">marlabs</span>
+	<span class="blue">marlabs</span> 
+
+
+how to add css class dynamically by using jQuery 
+-----------------------
+	For this purpose, jQuery provides various methods. 
+
+* hasClass
+* addClass
+* removeClass 
+
+
+hasClass()
+	It is used to check ,whether the given element has a specific css class or not. 
+
+syntax : - 
+	if($(selector).hasClass("className"))
+	{
+		//cssClass exists 
+	}
+	else
+	{
+		//cssClass NOt exists
+	}
+
+
+addClass
+-------
+	It is used to add css Class dynamically to the given element. 
+
+syntax : -
+	$(selector).addClass("cssClassName");
+
+
+removeClass
+------------
+	It is used to remove the css Class from the given element dynamically. 
+
+syntax : - 
+	if($(selector).hasClass("cssClassName"))
+	{
+		$(selector).removeClass("cssClassName");	
+	}
+
+
+
+
+
+This is all about simple (basic jquery). 
+For all these,we use jquery library (http://jquery.com)
+
