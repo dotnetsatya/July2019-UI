@@ -1,0 +1,33 @@
+<form id="loginFrom" name="loginForm">
+  <div>
+    <h3>Login Form</h3>
+  </div>
+  <div>
+    <label for="txtUsername">Username:</label>
+    <input type="text" id="txtUsername" name="txtUsername" />
+  </div>
+  <div>
+    <label for="txtPassword">Password:</label>
+    <input type="password" id="txtPassword" name="txtPassword" />
+  </div>
+  <div>
+    <button type="button" id="btnLogin">Login</button>
+  </div>
+</form>
+
+<script>
+  $("#btnLogin").click(function() {
+    var username = $("#txtUsername").val();
+    var password = $("#txtPassword").val();
+
+    if (store.validateLogin(username, password)) {
+      sessionStorage.setItem("loggedUser", username);
+      $("#topRightNavAnonymous").hide();
+      $("#topRightNavLogged").show();
+      $("#spnUsername").text(username);
+      $("#placeholderSection").load("partials/home.html");
+    } else {
+      alert("Invalid credentails");
+    }
+  });
+</script>
