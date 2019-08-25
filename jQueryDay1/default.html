@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery Demo</title>
+    <script type="text/javascript" src="JQuery.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#s1").click(function() {
+          $("#d1").animate({ height: "150px", width: "150px"  }, 1000)
+          .animate({ height: "200px", width: "200px" }, 1000)
+          .animate({ height: "100px", width: "100px" }, 1000)
+          .animate({backgroundColor:'blue'}, 1000)
+          .animate({backgroundColor:'green'}, 1000);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1 id="topHeader"></h1>
+    <span id="spn1">Click Me</span>
+
+    <div id="d1" style="width:100px;height:100px;background-color:silver;">
+      Marlabs Software
+    </div>
+    <br />
+    <span id="s1">Start Animation</span>
+    <!-- <script src="jquery.js"></script>
+    <script>
+      var jq = jQuery.noConflict();
+
+      jq(function() {
+        jq("#topHeader").html("Hello jQuery");
+
+        jq("#spn1").click(function() {
+          jq(this).hide(1000, () => {
+            jq(this).show(1000);
+          });
+        });
+      });
+    </script> -->
+  </body>
+</html>

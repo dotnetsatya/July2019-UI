@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+  </head>
+  <body>
+    <header id="topHeader">
+      <h2>JQuery Demo</h2>
+      <nav>
+        <ul>
+          <li>
+            <a href="" title="Login" id="lnkLogin1">Login</a>
+          </li>
+          <li>
+            <a href="" title="Register" id="lnkRegister1">Register</a>
+          </li>
+          <li>
+            <a href="" title="home">Home</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="main">
+      <div id="loginSection">
+        <h3>Login Form</h3>
+        <form id="loginForm">
+          <div>
+            <label for="txtUsername">Username:</label>
+            <input type="text" id="txtUsername" name="txtUsername" />
+          </div>
+          <div>
+            <label for="txtPassword">Password:</label>
+            <input type="password" id="txtPassword" name="txtPassword" />
+          </div>
+          <div>
+            <button type="button" id="btnLogin">Login</button> <br>
+            <span>If you don't have an account, click <a href="" id="lnkRegister">here</a> to create an Account. </span>
+          </div>
+        </form>
+      </div>
+      <div id="registerSection">
+        <h2>Sign Up</h2>
+        <form id="registerForm">
+          <div>
+            <label for="txtUsername">Username:</label>
+            <input type="text" id="txtUsername" name="txtUsername" />
+          </div>
+          <div>
+            <label for="txtPassword">Password:</label>
+            <input type="password" id="txtPassword" name="txtPassword" />
+          </div>
+          <div>
+            <button type="button" id="btnSignUp">Sign Up</button> <br>
+            <span>If you have already created an Account, click <a href="" id="lnkLogin">here</a> to Login.</span>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <span>&copy; 2019</span>
+    </footer>
+    <script src="jquery.js"></script>
+    <script src="login.js"></script>
+  </body>
+</html>

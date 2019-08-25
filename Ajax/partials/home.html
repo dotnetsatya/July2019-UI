@@ -1,0 +1,11 @@
+<div>
+  <h2>Welcome <span id="loggedUsername"></span></h2>
+</div>
+
+<script>
+  $(function() {
+    if (sessionStorage.getItem("loggedUser") != null) {
+      $("#loggedUsername").text(sessionStorage.getItem("loggedUser"));
+    }
+  });
+</script>
