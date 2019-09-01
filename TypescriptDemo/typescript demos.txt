@@ -1,0 +1,339 @@
+Typescript:
+
+Data types in typescript
+
+	number 
+	string
+	boolean
+	void 
+	any
+	Date 
+	[]
+	Array<type> (e.g. names: Array<string>)
+
+
+let variableName: number = 1000;
+variableName = 2000;
+
+
+var/let/const/readonly
+
+
+interface Iservice{
+	readonly value : any;
+}
+
+class ClassName {
+	readonly name : string ; //property
+
+	foo() : void {
+
+		const num: number = 1000; //variable
+	}
+}
+=========
+OOP
+	Object Oriented Programing
+	Everything is an object in Application Development.
+	Anything real world is an object.
+
+	Object is a collection of data and behaviour.
+
+		data : properties 
+		behaviour : action(methods)
+
+e.g.
+	Store is an object (Single Store)
+		Person (customer/ employee)
+			Purchase/Sale
+		Product
+			Id
+			Name
+			Price
+			InStock
+		product 1: Coke
+
+
+	Object is an instance.
+
+	How do you define Object template?
+		template means, the object's definition.
+
+	we use "class" to define the object's definition.
+
+
+class Employee {
+	id: number;
+	name: string;
+	jobTitle: string;
+	salary: number;
+}
+
+class Customer {
+	id: number;
+	name: string;
+	address: string;
+}
+
+class Store {
+	customerData: Customer [];
+	employeeData : Employee [];
+	storeLocation: string;
+
+	purchase() {
+	}
+
+	sell() {
+	}
+
+	addStock() {
+	}
+
+	updateStock() {
+	}
+
+	addEmployee() {
+	}
+
+}
+
+
+store1 = new Store();
+	store1.storeLocation = "NJ";
+
+store2 = new Store();
+	store2.storeLocation = "NY";
+
+store3 = new Store();
+	store3.storeLocation = "RI";
+
+
+class syntax : TS
+
+class ClassName {
+	//properties 
+	//methods
+}
+
+
+Note:
+ClassName is always PascalCase
+
+
+How to create an instance ? 
+
+let/var objName = new ClassName();
+
+
+
+Constructor : 
+It is a special method, which get's called/invoked automatically.
+It's called as soon as you create an instance.
+It is used for initializing the properties.
+
+e.g.
+
+class Employee {
+	constuctor(public id: number, public firstName: string, public lastName: string, public: string) {
+		//logic
+	}
+
+	getFullName(): string {
+		return `${this.firstName} ${this.lastName}`;
+	}	
+
+}
+
+var employee = new Employee(101, 'satya', 'palakurla', 'Dev');
+console.log(employee.getFullName());
+
+console.log(employee.firstName);
+...
+..
+
+
+
+
+How to create methods the class?
+
+class ClassName {
+
+	methodName(arg1: type, arg2: type, ...) : returnType {
+		//logic
+
+	return "something";
+	}
+}
+
+
+e.g.
+enum Color {
+	RED,
+	BLUE,
+	BLACK,
+	WHITE
+}
+
+class Car {
+
+	make : string;
+	model: string;
+	color: Color;
+	speed: number;
+
+	constuctor(carMake: string, carModel: string, carColor: Color)
+	{
+		this.make = carMake;
+		this.model = carModel;
+		this.color = carColor;
+		this.speed = 0;
+	}
+
+	accelerate() : number {
+		this.speed ++;
+	return this.speed;
+	}
+
+	decelerate() : number {
+		this.speed --;
+	return this.speed;
+	}
+
+}
+
+
+let car1 = new Car('BMW', '2020', Color.RED);
+let currentSpeed = car1.accelerate();
+
+currentSpeed = car1.accelerate();
+currentSpeed = car1.accelerate();
+
+currentSpeed = car1.decelerate();
+
+
+============
+Store 
+class Person {
+    public id: number;
+    public firstName: string;
+    public lastName: string;
+    public email: string;
+    public address: string;
+    public fullName: string;
+
+    public constructor(id: number, fName: string, lName: string, email: string, address: string) {
+        this.id = id;
+        this.firstName = fName;
+        this.lastName = lName;
+        this.email = email;
+        this.address = address;
+        this.fullName = this.concate(this.firstName, this.lastName);
+    }
+
+    public getData(): string {
+        return "something";
+    }
+
+    private concate(first: string, last: string): string {
+        return `${first} ${last}`;
+    }
+
+}
+
+class Employee extends Person {
+    salary: number;
+    jobTitle: string;
+
+    constructor(id: number, fName: string, lName: string, email: string, address: string, salary: number, title: string) {
+        super(id, fName, lName, email, address);
+        this.salary = salary;
+        this.jobTitle = title;
+    }
+
+}
+
+
+class Customer extends Person {
+    order: number;
+    constructor(id: number, fName: string, lName: string, email: string, address: string, order: number) {
+        super(id, fName, lName, email, address);
+        this.order = order;
+    }
+
+}
+
+let employee = new Employee(1001, 'satya', 'palakurla', 'satya@gmail.com', 'RI', 100, 'Dev');
+console.log(employee.firstName); //prints  satya
+console.log(employee.jobTitle); //print Dev
+
+===========
+abstract class vs interface
+
+
+interface
+	It includes only abstract methods ( without implementation)
+	You must implement(extend) interface and implement each method  in a derived class.
+	we can't instantitiate the interface directly.
+
+
+e.g.
+
+interface IGreeter {
+	greeting(name : string) : string ;
+
+}
+
+
+class Greeter implements IGreeter {
+
+	greeting(message: string) : string {
+	//logic
+	return "something";
+	}
+}
+
+
+
+abstract class: 
+	It includes abstract as well as concrete methods.
+	It can't be instantiated directly.
+	You must extend it and implement all the abstract methods.
+
+e.g.
+	abstract class ServiceBase {
+		abstract sendEmail(email: string): void;   //abstract method
+	
+		processEmail(): void {
+			//logic
+		}  //non-abstract/concrete
+	}
+	
+
+
+	class DefaultProcessor extends ServiceBase {
+		sendEmail(email: string): void {
+
+		//logic
+		}
+	}
+
+
+
+let processor = new DefaultProcessor();
+	processor.sendEmail('satya@gmail.com');
+	process.processEmail();
+
+=======================
+	
+	
+
+	
+
+
+
+
+	
+
+
+
+
