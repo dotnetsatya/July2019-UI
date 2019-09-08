@@ -1,0 +1,21 @@
+<div class="container">
+    <form class="form">
+        <fieldset>
+            <legend>Login Form</legend>
+            <div class="form-group">
+                <label for="txtUsername" class="col-form-label">Username: </label>
+                <input type="text" class="form-control" id="txtUsername" name="txtUsername" [(ngModel)]="loginModel.username" />
+            </div>
+            <div class="form-group">
+                <label for="txtPassword" class="col-form-label">Password: </label>
+                <input type="password" class="form-control" id="txtPassword" name="txtPassword" [(ngModel)]="loginModel.password"/>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary" (click)="validLogin()">Login</button>
+                &nbsp;
+                &nbsp;
+                <button type="reset" class="btn btn-warning">Cancel</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
