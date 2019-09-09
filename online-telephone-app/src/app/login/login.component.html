@@ -1,20 +1,33 @@
 <div class="container">
-    <form class="form">
+    <div class="row" *ngIf="isInvalidUser">
+        <div class="col-12">
+            <div class="alert alert-danger" role="alert">
+               The credentails you entered are Invalid! Please try again.
+            </div>
+        </div>
+    </div>
+
+    <form class="form" id="loginForm" name="loginForm" (ngSubmit)="validLogin()" #loginForm="ngForm">
         <fieldset>
             <legend>Login Form</legend>
             <div class="form-group">
-                <label for="txtUsername" class="col-form-label">Username: </label>
-                <input type="text" class="form-control" id="txtUsername" name="txtUsername" [(ngModel)]="loginModel.username" />
+                <label for="txtUsername" class="col-form-label">Username:<span class="text-danger">*</span> </label>
+                <input type="text" [ngClass]="{'has-error': txtUsername.invalid && (txtUsername.dirty || txtUsername.touched)}" class="form-control" id="txtUsername" name="txtUsername"
+                    [(ngModel)]="loginModel.username" required #txtUsername="ngModel" />
+                    <div  *ngIf="txtUsername.invalid && (txtUsername.dirty || txtUsername.touched)" class="alert alert-danger">Username field is required.</div>
             </div>
             <div class="form-group">
-                <label for="txtPassword" class="col-form-label">Password: </label>
-                <input type="password" class="form-control" id="txtPassword" name="txtPassword" [(ngModel)]="loginModel.password"/>
+                <label for="txtPassword" class="col-form-label">Password:<span class="text-danger">*</span> </label>
+                <input type="password" [ngClass]="{'has-error': txtPassword.invalid && (txtPassword.dirty || txtPassword.touched)}" class="form-control" id="txtPassword" name="txtPassword"
+                    [(ngModel)]="loginModel.password" required #txtPassword="ngModel" />
+                    <div  *ngIf="txtPassword.invalid && (txtPassword.dirty || txtPassword.touched)" class="alert alert-danger">Password field is required.</div>
             </div>
             <div>
-                <button type="button" class="btn btn-primary" (click)="validLogin()">Login</button>
+                <button type="submit" class="btn btn-primary" [ngClass]="{'not-allowed': !loginForm.form.valid}"
+                    [disabled]="!loginForm.form.valid">Login</button>
                 &nbsp;
                 &nbsp;
-                <button type="reset" class="btn btn-warning">Cancel</button>
+                <button type="reset" class="btn btn-warning" (click)="loginForm.form.reset()">Cancel</button>
             </div>
         </fieldset>
     </form>

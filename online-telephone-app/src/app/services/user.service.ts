@@ -17,8 +17,8 @@ export class UserService {
     }
 
     validateLogin(username: string, password: string): boolean {
-        var selectedUser = this.userData.filter(user => user.username == username && user.password == password);
-        if (selectedUser != null) {
+        var results = this.userData.filter(user => user.username == username && user.password == password);
+        if (results != null && results.length > 0) {
             return true;
         } else {
             return false;

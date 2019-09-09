@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   loginModel: UserModel;
+  isInvalidUser: boolean = false;
+
   constructor(private userService: UserService, private router: Router) {
 
 
@@ -24,10 +26,11 @@ export class LoginComponent implements OnInit {
   validLogin(): void {
     let isValid = this.userService.validateLogin(this.loginModel.username, this.loginModel.password);
     if (isValid) {
+      this.isInvalidUser = false;
       sessionStorage.setItem('loggedUsername', this.loginModel.username);
       this.router.navigate(['/welcome']);
     } else {
-      alert("Invali Credentails");
+      this.isInvalidUser = true;
     }
   }
 }

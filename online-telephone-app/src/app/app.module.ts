@@ -12,7 +12,9 @@ import { HomeComponent } from './home/home.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
 
+import { ContactFormComponent } from './contacts/contact-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,11 +24,13 @@ import { WelcomeComponent } from './welcome/welcome.component';
     SignUpComponent,
     HomeComponent,
     NotfoundComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],

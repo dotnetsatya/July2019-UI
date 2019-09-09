@@ -5,12 +5,14 @@ import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { ContactFormComponent } from './contacts/contact-form.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'welcome', component: WelcomeComponent },
+  { path: 'contacts', component: ContactFormComponent },
   {
     path: '',
     redirectTo: '/home',
