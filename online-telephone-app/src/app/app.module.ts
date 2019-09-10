@@ -14,7 +14,10 @@ import { WelcomeComponent } from './welcome/welcome.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { ContactFormComponent } from './contacts/contact-form.component';
+import { ContactFormComponent } from './manage-contacts/add-contact/contact-form.component';
+import { ManageContactComponent } from './manage-contacts/manage-contact.component';
+import { ContactListComponent } from './manage-contacts/contact-list/contact-list.component';
+import { ContactDetailsComponent } from './manage-contacts/contact-details/contact-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +28,10 @@ import { ContactFormComponent } from './contacts/contact-form.component';
     HomeComponent,
     NotfoundComponent,
     WelcomeComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    ManageContactComponent,
+    ContactListComponent,
+    ContactDetailsComponent
   ],
   imports: [
     BrowserModule,
