@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user.service';
 import { UserModel } from '../models/userModel';
 import { Router } from '@angular/router';
+import { BroadCastService } from '../services/broadcast.service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit {
   loginModel: UserModel;
   isInvalidUser: boolean = false;
 
-  constructor(private userService: UserService, private router: Router) {
+  constructor(private broadCast: BroadCastService, private userService: UserService, private router: Router) {
 
 
   }
@@ -28,6 +29,7 @@ export class LoginComponent implements OnInit {
     if (isValid) {
       this.isInvalidUser = false;
       sessionStorage.setItem('loggedUsername', this.loginModel.username);
+      this.broadCast.refreshUserLogin(true);
       this.router.navigate(['/welcome']);
     } else {
       this.isInvalidUser = true;

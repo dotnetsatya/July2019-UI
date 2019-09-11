@@ -18,6 +18,10 @@ import { ContactFormComponent } from './manage-contacts/add-contact/contact-form
 import { ManageContactComponent } from './manage-contacts/manage-contact.component';
 import { ContactListComponent } from './manage-contacts/contact-list/contact-list.component';
 import { ContactDetailsComponent } from './manage-contacts/contact-details/contact-details.component';
+import { HttpClientModule } from '@angular/common/http';
+import { TodoListComponent } from './todos/todo-list.component';
+import { TodoDetailsComponent } from './todos/todo-details/todo-details.component';
+import { LoaderComponent } from './loader/loader.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,12 +35,16 @@ import { ContactDetailsComponent } from './manage-contacts/contact-details/conta
     ContactFormComponent,
     ManageContactComponent,
     ContactListComponent,
-    ContactDetailsComponent
+    ContactDetailsComponent,
+    TodoListComponent,
+    TodoDetailsComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],

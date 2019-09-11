@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { BroadCastService } from '../../services/broadcast.service';
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html',
@@ -7,14 +8,14 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
     isUserLogged: boolean = false;
-    constructor(private router: Router) {
+    constructor(private broadCast: BroadCastService, private router: Router) {
 
     }
 
     ngOnInit(): void {
-        if (sessionStorage.getItem('loggedUsername') != null && sessionStorage.getItem('loggedUsername') != undefined) {
-            this.isUserLogged = true;
-        }
+        this.broadCast.refreshHeader.subscribe((value: boolean) => {
+            this.isUserLogged = value;
+        });
     }
 
     logout(): void {

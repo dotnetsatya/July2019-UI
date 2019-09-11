@@ -7,7 +7,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ManageContactComponent } from './manage-contacts/manage-contact.component';
 import { ContactFormComponent } from './manage-contacts/add-contact/contact-form.component';
-
+import { TodoListComponent } from './todos/todo-list.component';
+import { TodoDetailsComponent } from './todos/todo-details/todo-details.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
@@ -16,6 +17,8 @@ const routes: Routes = [
   { path: 'contacts', component: ManageContactComponent },
   { path: 'add-contact', component: ContactFormComponent },
   { path: 'add-contact/:id', component: ContactFormComponent },
+  { path: 'todos', component: TodoListComponent },
+  { path: 'todo-details/:id', component: TodoDetailsComponent },
   {
     path: '',
     redirectTo: '/home',
