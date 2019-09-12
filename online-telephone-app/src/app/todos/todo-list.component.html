@@ -22,8 +22,8 @@
                     <tr *ngFor="let todo of todoList">
                         <td>{{todo.userId}}</td>
                         <td>{{todo.id}}</td>
-                        <td>{{todo.title}}</td>
-                        <td>{{todo.completed}}</td>
+                        <td>{{todo.title | capitalize}}</td>
+                        <td [ngClass]="{'bg-primary': todo.completed == true, 'bg-danger': todo.completed == false}">{{todo.completed}}</td>
                         <td>
                             <button type="button" class="btn btn-info" (click)="onTodoSelect(todo)">View</button>
                             &nbsp;

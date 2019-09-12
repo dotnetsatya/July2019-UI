@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AddressModel } from '../../models/addressModel';
 import { ContactModel } from '../../models/contactModel';
 import { UserModel } from '../../models/userModel';
-import { Subscription } from 'rxjs';
+import { Subscription, Observable, of } from 'rxjs';
 
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Validators } from '@angular/forms';
@@ -13,13 +13,16 @@ import { ContactSevice } from '../../services/contact.service';
 import { UserService } from '../../services/user.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
+import { CanComponentDeactivate } from '../../models/interfaces/canDeactivateComponent';
+import { DialogService } from '../../services/dialog.service';
+
 @Component({
     selector: 'contact-form',
     templateUrl: './contact-form.component.html',
     styleUrls: ['./contact-form.component.scss']
 })
 
-export class ContactFormComponent implements OnInit, OnDestroy {
+export class ContactFormComponent implements OnInit, OnDestroy, CanComponentDeactivate {
 
     newContact: ContactModel;
     contactForm: FormGroup;
@@ -27,7 +30,7 @@ export class ContactFormComponent implements OnInit, OnDestroy {
     contactId: string;
 
     private sub: Subscription;
-    constructor(private fb: FormBuilder, private contactService: ContactSevice, private userService: UserService, private router: Router, private activatedRoute: ActivatedRoute) {
+    constructor(private dialogService: DialogService,  private fb: FormBuilder, private contactService: ContactSevice, private userService: UserService, private router: Router, private activatedRoute: ActivatedRoute) {
 
     }
 
@@ -117,4 +120,11 @@ export class ContactFormComponent implements OnInit, OnDestroy {
         this.sub.unsubscribe();
     }
 
+    canDeactivate(): Observable<boolean> | Promise<boolean> | boolean {
+        if(this.contactForm.dirty){     
+            return this.dialogService.confirm('There are unsaved changes, click Ok to cancel to go different route OR cancel to keep on the same page?');
+          }
+      
+          return of(true);
+    }
 }

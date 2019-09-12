@@ -18,8 +18,8 @@
             </thead>
             <tbody>
                 <tr *ngFor="let contact of myContacts">
-                    <td>{{contact.firstName}}</td>
-                    <td>{{contact.lastName}}</td>
+                    <td>{{contact.firstName | capitalize}}</td>
+                    <td>{{contact.lastName | capitalize}}</td>
                     <td>{{contact.address.street}}</td>
                     <td>{{contact.address.city}}</td>
                     <td>{{contact.address.state}}</td>

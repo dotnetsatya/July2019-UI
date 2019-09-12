@@ -22,6 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { TodoListComponent } from './todos/todo-list.component';
 import { TodoDetailsComponent } from './todos/todo-details/todo-details.component';
 import { LoaderComponent } from './loader/loader.component';
+import { CapitalizePipe } from './pipes/capitalize.pipe';
+import { ArrayToStringPipe } from './pipes/arraytostring.pipe';
+import { HighlightDirective } from './directives/highlight.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +41,10 @@ import { LoaderComponent } from './loader/loader.component';
     ContactDetailsComponent,
     TodoListComponent,
     TodoDetailsComponent,
-    LoaderComponent
+    LoaderComponent,
+    CapitalizePipe,
+    ArrayToStringPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
