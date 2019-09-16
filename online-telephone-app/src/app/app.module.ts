@@ -25,6 +25,17 @@ import { LoaderComponent } from './loader/loader.component';
 import { CapitalizePipe } from './pipes/capitalize.pipe';
 import { ArrayToStringPipe } from './pipes/arraytostring.pipe';
 import { HighlightDirective } from './directives/highlight.directive';
+
+import { AngularMaterialComponent } from './angular-material/angular-material.component';
+
+
+//Angular Material Modules
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatDialogModule} from '@angular/material/dialog';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,11 +55,18 @@ import { HighlightDirective } from './directives/highlight.directive';
     LoaderComponent,
     CapitalizePipe,
     ArrayToStringPipe,
-    HighlightDirective
+    HighlightDirective,
+    AngularMaterialComponent,    
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    BrowserAnimationsModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    DragDropModule,
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule

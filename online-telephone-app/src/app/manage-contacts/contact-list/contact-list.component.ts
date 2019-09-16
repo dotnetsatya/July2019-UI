@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./contact-list.component.scss']
 })
 export class ContactListComponent implements OnInit {
+  isModalOpen: boolean = false;
 
   @Input() myContacts: ContactModel[];
   @Output() onContactSelected: EventEmitter<ContactModel> = new EventEmitter<ContactModel>();
@@ -23,5 +24,13 @@ export class ContactListComponent implements OnInit {
   onEditContact(contact: ContactModel) : void {
     alert(contact.id);
     this.router.navigate(['/add-contact', contact.id]);
+  }
+
+  onDelete(contact: ContactModel): void {
+    this.isModalOpen = true;
+  }
+
+  onCloseModal(): void {
+    this.isModalOpen = false;
   }
 }

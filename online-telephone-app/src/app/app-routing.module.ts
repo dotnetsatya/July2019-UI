@@ -11,6 +11,7 @@ import { TodoListComponent } from './todos/todo-list.component';
 import { TodoDetailsComponent } from './todos/todo-details/todo-details.component';
 import { AuthGuard } from './services/auth-guard.service';
 import { CanDeactivateGuard } from './services/deactivate-guard.service';
+import { AngularMaterialComponent } from './angular-material/angular-material.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'add-contact/:id', component: ContactFormComponent , canActivate: [AuthGuard], canDeactivate: [CanDeactivateGuard] },
   { path: 'todos', component: TodoListComponent, canActivate: [AuthGuard] },
   { path: 'todo-details/:id', component: TodoDetailsComponent, canActivate: [AuthGuard] },
+  { path: 'angular-material', component: AngularMaterialComponent },
   {
     path: '',
     redirectTo: '/home',

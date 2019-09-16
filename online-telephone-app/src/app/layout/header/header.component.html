@@ -5,6 +5,7 @@
     <a class="p-2 text-dark" *ngIf="isUserLogged" routerLink="/contacts" routerLinkActive="active">My Contacts</a>
     <a class="p-2 text-dark" *ngIf="isUserLogged" routerLink="/todos" routerLinkActive="active">Todos</a>
     <a class="p-2 text-dark" *ngIf="isUserLogged" (click)="logout()">Logout</a>
+    <a class="p-2 text-dark" *ngIf="isUserLogged" routerLink="angular-material" routerLinkActive="active" >Angular Material</a>
   </nav>
   <a class="btn btn-outline-primary" *ngIf="!isUserLogged"  routerLink="/sign-up" routerLinkActive="active">Sign up</a>
 </div>
