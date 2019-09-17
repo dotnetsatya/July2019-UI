@@ -1,7 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ContactModel } from '../../models/contactModel';
 import { Router } from '@angular/router';
-
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from '../../dialog/dialog.component';
 @Component({
   selector: 'app-contact-list',
   templateUrl: './contact-list.component.html',
@@ -10,9 +11,10 @@ import { Router } from '@angular/router';
 export class ContactListComponent implements OnInit {
   isModalOpen: boolean = false;
 
+  
   @Input() myContacts: ContactModel[];
   @Output() onContactSelected: EventEmitter<ContactModel> = new EventEmitter<ContactModel>();
-  constructor(private router : Router) { }
+  constructor(private router : Router, private dialog: MatDialog) { }
 
   ngOnInit() {
   }
@@ -27,10 +29,16 @@ export class ContactListComponent implements OnInit {
   }
 
   onDelete(contact: ContactModel): void {
-    this.isModalOpen = true;
+    // this.isModalOpen = true;
+
+    this.dialog.open(DialogComponent);
   }
 
   onCloseModal(): void {
+    this.isModalOpen = false;
+  }
+
+  onSaveModel(): void {
     this.isModalOpen = false;
   }
 }

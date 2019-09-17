@@ -27,15 +27,19 @@ import { ArrayToStringPipe } from './pipes/arraytostring.pipe';
 import { HighlightDirective } from './directives/highlight.directive';
 
 import { AngularMaterialComponent } from './angular-material/angular-material.component';
-
+import { DialogContentExampleDialog } from './angular-material/angular-material.component';
 
 //Angular Material Modules
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatDialogModule} from '@angular/material/dialog';
-import {DragDropModule} from '@angular/cdk/drag-drop';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+
+
+//Custom Dialog with MatDialog
+import { DialogComponent } from './dialog/dialog.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +60,9 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     CapitalizePipe,
     ArrayToStringPipe,
     HighlightDirective,
-    AngularMaterialComponent,    
+    AngularMaterialComponent,
+    DialogContentExampleDialog,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -72,6 +78,7 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     AppRoutingModule
   ],
   providers: [],
+  entryComponents: [ DialogContentExampleDialog, DialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
