@@ -27,6 +27,13 @@ var store = {
       }
     }
   }
+  // viewEmployee: function(id){
+  //   for(var i = 0; i < this.employeeData.length; i++){
+  //     if(this.employeeData[i].employeeId == id){
+  //       this.employeeData.push(viewContent);
+  //     }
+  //   }
+  // }
 };
 
 function initilize() {
@@ -54,12 +61,31 @@ function loadData(gridData) {
       element.salary +
       "</td><td><a class='btn-danger' onclick='fnDelete(" +
       element.employeeId +
-      ")'>Delete</a>&nbsp;<a class='btn-primary'>Edit</a>&nbsp;<a class='btn-secondary'> View</a></td></tr>";
+      ")'>Delete</a>&nbsp;<a class='btn-primary'>Edit</a>&nbsp;<a class='btn-secondary')'> View</a></td></tr>";
   });
 
   table += "</table>";
   document.getElementById("grid").innerHTML = table;
 }
+
+// function viewData(viewContent) {
+//   var label = "<label>";
+//   viewContent.forEach(element => {
+//     label +=
+//       element.employeeId +
+//       " " +
+//       element.employeeName +
+//       " " +
+//       element.jobTitle +
+//       " " +
+//       element.salary;
+//   });
+
+//   label += "</label>";
+//   document.getElementById("employeeReadView").innerHTML = label;
+// }
+
+
 
 window.onload = function() {
   initilize();
@@ -117,3 +143,7 @@ function fnDelete(id) {
     loadData(store.employeeData);
   }
 }
+
+// function fnView(id){
+//   store.employee = label;
+// }
