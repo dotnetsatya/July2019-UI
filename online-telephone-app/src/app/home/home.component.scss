@@ -1,0 +1,25 @@
+.message {
+  padding: 10px 10px;
+  border: 1px solid gray;
+  font-size: 14px;
+  border-radius: 10px;
+  background-color: gray;
+}
+
+.error {
+  @extend .message;
+  color: red;
+  background-color: black;
+}
+
+.warning {
+  @extend .message;
+  color: yellow;
+  background-color: lightblue;
+}
+
+.success {
+  @extend .message;
+  color: green;
+  background-color: bisque;
+}
