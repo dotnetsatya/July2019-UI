@@ -1,0 +1,467 @@
+typescript:
+Data Types
+Variable declaration
+	local variable 
+	property
+class 
+	properties
+	methods
+	property(public/private/protected) (default is public)
+
+	methods: (public/private/protected)
+		with parameters
+		with return type
+	static properties
+		(access the static data with classname directly)
+
+	readonly properties (class members)
+	const variables(local variable)
+====================
+interface
+
+what is the need of interface?
+
+data types(primitive types)
+	number
+	boolean
+	string
+	void
+	any
+	
+	we use these types for storing simple data.
+
+
+e.g.
+
+funtion foo(labelObj : LabelObject) {
+	
+}
+
+
+
+foo({label: 'Menu', id: 101, text:'hellow'});
+
+
+interface LabelObject {
+	label: string;
+}
+
+
+
+Using interface, we can define custom type for complex data.
+
+You can do the same class as well.
+
+WE use class for Implementing the behaviour.
+we use interface for defining the abstraction.
+
+
+If you want a new type with just data, you can use interface.
+If you want a new type with data and behaviour , you can use class.
+
+e.g.
+I want to configure application level settings:
+
+interface IAppSetting {
+	baseUrl: string;
+	env: string;
+	version: number;	
+}
+
+class SiteAppSetting implements IAppSetting {
+    public baseUrl: string;
+	public env: string;
+    public version: number;
+
+    public constructor(){
+        this.baseUrl = "https://www.test-site.com/ui";
+    }
+    
+    uiURL : string;
+}
+
+class ServerAppSetting implements IAppSetting  {
+    public baseUrl: string;
+	public env: string;
+    public version: number;
+
+    public constructor(){
+        this.baseUrl = "https://www.test-site/api";
+    }
+    
+    apiURL : string;
+
+}
+
+let appSettings : IAppSetting;
+appSettings = new SiteAppSetting();
+
+console.log(appSettings);
+
+
+console.log(appSettings.baseUrl);
+
+
+let uiSettings : IAppSetting;
+
+uiSettings = new ServerAppSetting();
+console.log(uiSettings.baseUrl);
+
+
+
+
+Note:
+If you need to the abstraction and implement in different flavors, we could use interface.
+
+
+
+Let us talk about logging:
+It is a process of tracking the actions in the application.
+tracking errors, actions and etc..
+
+How to can we trak the actions(error, success, information, warning etc..)
+e.g.
+	track into the database
+	track into some file.
+	track into console
+	just show the feed(log) on the UI using some alerts
+
+
+We need some common abstraction for set of actions.
+Then , implement in different flavors and use whichever you need.
+
+We can do this using an interface.
+
+using an interface, we define the abstraction(only definition)
+
+
+Note:
+By default, all the properties and methods are abstract in the interface.
+
+e.g.
+interface ILogger {
+    error(message: string): void;
+    info(message: string): void;
+    waring(message: string): void;
+    success(message: string): void;
+}
+
+
+class DbLogger implements ILogger {
+    public error(message: string): void {
+        //logic to save in database
+    }
+
+    public info(message: string): void {
+
+    }
+
+    public waring(message: string): void {
+
+    }
+
+    public success(message: string): void {
+
+    }
+}
+
+
+class FileLogger implements ILogger {
+    public error(message: string): void {
+        //logic to save in file
+    }
+
+    public info(message: string): void {
+
+    }
+
+    public waring(message: string): void {
+
+    }
+
+    public success(message: string): void {
+
+    }
+}
+
+class ConsoleLogger implements ILogger {
+    public error(message: string): void {
+        console.log(message);
+    }
+
+    public info(message: string): void {
+
+    }
+
+    public waring(message: string): void {
+
+    }
+
+    public success(message: string): void {
+
+    }
+}
+
+class AlertLogger implements ILogger {
+    public error(message: string): void {
+        alert(message);
+    }
+
+    public info(message: string): void {
+
+    }
+
+    public waring(message: string): void {
+
+    }
+
+    public success(message: string): void {
+
+    }
+}
+
+let logger: ILogger;
+logger = new AlertLogger();
+logger.error('Error in saving data');
+
+
+
+Note:
+Optional property in the interface
+
+interface LabelType {
+    label : string; //required
+    id?: number; //optional
+    name? : string; //optional
+}
+
+
+function foo(labelObj : LabelType){
+    console.log(labelObj.label);
+}
+
+foo({label: 'Nav'});
+foo({label:'footer', id: 100})
+foo({label:'Menu', id: 100, name: 'satya'});'
+
+
+Note:
+How to access extra properties in the interface:
+
+interface LabelType {
+    label : string; //required
+    id?: number; //optional
+    name? : string; //optional
+    [propertyName: string] : any;
+}
+
+
+function foo(labelObj : LabelType){
+    console.log(JSON.stringify(labelObj));
+   
+}
+
+foo({label: 'Nav'});
+foo({label:'footer', id: 100})
+foo({label:'Menu', id: 100, name: 'satya'});
+let inputObj : LabelType = {label:'topNav', id: 101, name:'TopNavigtion', className:'top-nav'};
+
+foo(inputObj);
+
+
+NOte:
+You can declare properties or/and Methods in an interface. (only abstract/definition)
+You must implement an interface and override the methods with required logic.
+
+e.g.
+
+interface ITimer {
+    time: Date;
+    setTime(currentTime: Date): void;
+}
+
+class DigitalTimer implements ITimer {
+    public time: Date;
+
+    public constructor() {
+        this.time = new Date();
+    }
+
+    setTime(currentTime: Date): void {
+        this.time = currentTime;
+    }
+}
+
+let timer: ITimer;
+timer = new DigitalTimer();
+timer.setTime(new Date());
+console.log(timer.time);
+
+===========
+Note:
+
+for class inheritance, we use "extends"
+for interface inheritance : we use "implements"
+
+
+You can have only one base for any class. There is only single inheritance(class)
+
+But, you can implement multiple interfaces in a class(There is multiple interface inheritance)
+
+e.g.
+
+interface IDispose {
+    dispose(): void;
+}
+
+
+interface IOnInit {
+    ngOnInit(): void;
+}
+
+class ServiceBase implements IDispose, IOnInit {
+    dispose(): void {
+
+    }
+
+
+    ngOnInit(): void {
+
+    }
+}
+
+
+============
+interface: 
+	we have only abstract methods/properties (no implementation)
+
+abstract class:
+	We can have abstract as well as concrete methods.
+
+
+In both the cases, we can't instatiate them.
+we must either extend(abstract class) OR implement(inteface)
+
+
+===========
+Methods in Typescript:
+
+function foo(arg1: number): number {
+    return 0;
+}
+
+foo(100);
+	This is without class
+
+
+class DemoClass {
+
+    public sayHello(messsage: string): void {
+
+    }
+}
+
+	//This is with class
+
+============
+
+parameter types:
+required
+optional
+default
+restParameter
+
+optional/default/restParameter must be right most in the argmentList.
+==========
+
+Generics in Typescript
+
+Generic function 
+
+function foo<T>(arg: T): T {
+    return arg;
+}
+
+foo<number>(999);
+foo<string>('888');
+foo<boolean>(true);
+
+
+
+
+Generic class
+	class HtppService<T> {
+    obj: T;
+
+    get(): T {
+        let result: T;
+        return result;
+    }
+
+
+    post(data: T): void {
+
+    }
+
+
+    put(data: T): void {
+
+    }
+
+    delete(data: T): void {
+
+    }
+}
+
+class Employee {
+    //properties
+    constructor(id: number, name: string) {
+
+    }
+}
+
+class Customer {
+    //properties
+
+    constructor(custId: number, custName: string) {
+
+    }
+}
+
+let http = new HtppService<Employee>();
+let employeeResult: Employee = http.get();
+http.post(new Employee(200, 'satya'));
+http.put(new Employee(200, 'satya'));
+http.delete(new Employee(200, 'satya'));
+
+let httpCustomer = new HtppService<Customer>();
+let customerREsult: Customer = httpCustomer.get();
+httpCustomer.post(new Customer(200, 'satya'));
+httpCustomer.put(new Customer(200, 'satya'));
+httpCustomer.delete(new Customer(200, 'satya'));
+
+
+
+Generic interface
+
+interface IService<T> {
+	addData(input : T) : void;
+	updateData(input: T) : void;
+	deleteData(input : T) : void;
+}
+
+class Customer {
+}
+
+
+class Employee {
+}
+
+class CustomerService implements IService<Customer> {
+	
+}
+
+
+class EmployeeService implements IService<Employee> {
+}
+
