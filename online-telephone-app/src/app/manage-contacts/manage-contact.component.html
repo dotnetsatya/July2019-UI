@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-12">
+        <h1>Manage Contacts</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <button type="button" class="btn btn-primary" (click)="routeToAddContact()">Add New Contact</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <app-contact-list [myContacts]="contactsData" (onContactSelected)="callback($event)"></app-contact-list>
+    </div>
+</div>
+<div class="row" *ngIf="selectedContact">
+    <div class="col-12">
+      <app-contact-details [selectedContact]="selectedContact"></app-contact-details>
+    </div>
+</div>

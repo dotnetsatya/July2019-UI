@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="jumborton">
+            <H2 appHighlight="orange">Online Telephone</H2>
+            <h4 *ngIf="today">Today dates: {{today | date:'fullDate' | lowercase}}</h4>
+            <ng-template [ngIf]="today">
+                Today dates: {{today | date}}
+            </ng-template>
+        </div>
+    </div>
+</div>
+
+<form>
+    <input type="text" name="name" id="txtName" [(ngModel)]="query" />
+</form>
+
+{{query | capitalize}}
+<br>
+<br>
+
+{{names | arraytoString}}
+<br>
+{{arr | arraytoString: 'name'}}
+<br>
+{{arr | arraytoString: 'id'}}
+<br>
+<br>
+<span class="message">This is a simple dialog message</span>
+<br>
+<br>
+<br>
+<br>
+<span class="error">This is for simple error dialog</span>
+<br>
+<br>
+<br>
+<br>
+<span class="warning">This is for simple warning dialog</span>
+<br>
+<br>
+<br>
+<br>
+<span class="success">This is for simple success dialog</span>
